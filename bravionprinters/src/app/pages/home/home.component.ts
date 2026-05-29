@@ -56,17 +56,26 @@ export class HomeComponent implements OnInit, OnDestroy {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             this.showServices.set(true);
-          } else {
-            this.showServices.set(false);
+            observer.disconnect(); // Keep visible permanently once entered
           }
         });
       }, { threshold: 0.1 });
       
-      // Delay to ensure view is initialized
+      // Delay to ensure view is initialized and check current viewport state
       setTimeout(() => {
         const servicesSection = document.getElementById('services-section');
-        if (servicesSection) observer.observe(servicesSection);
-      }, 100);
+        if (servicesSection) {
+          const rect = servicesSection.getBoundingClientRect();
+          const inViewport = rect.top < window.innerHeight && rect.bottom >= 0;
+          if (inViewport) {
+            this.showServices.set(true);
+          } else {
+            observer.observe(servicesSection);
+          }
+        } else {
+          this.showServices.set(true);
+        }
+      }, 150);
     } else {
       // Fallback
       this.showServices.set(true);
