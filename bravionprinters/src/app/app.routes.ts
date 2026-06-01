@@ -1,9 +1,10 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { ServiceDetailComponent } from './pages/service-detail/service-detail.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'services/:id', component: ServiceDetailComponent },
-  { path: '**', redirectTo: '' }
+  { path: '', redirectTo: 'brand', pathMatch: 'full' },
+  { path: 'design', loadComponent: () => import('./pages/design/design.component').then(m => m.DesignComponent) },
+  { path: 'print', loadComponent: () => import('./pages/print/print.component').then(m => m.PrintComponent) },
+  { path: 'stationery', loadComponent: () => import('./pages/stationery/stationery.component').then(m => m.StationeryComponent) },
+  { path: 'brand', loadComponent: () => import('./pages/brand/brand.component').then(m => m.BrandComponent) },
+  { path: '**', redirectTo: 'brand' }
 ];

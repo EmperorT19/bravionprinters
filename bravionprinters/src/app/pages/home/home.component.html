@@ -14,26 +14,26 @@
     <div class="stripe stripe-black" [class.stripe-hovered]="hoveredStripe() === 0" [class.stripe-shrunk]="hoveredStripe() !== null && hoveredStripe() !== 0" (mouseenter)="hoveredStripe.set(0)" (mouseleave)="hoveredStripe.set(null)">
       <div class="stripe-content">
         <span class="stripe-label">ESTABLISHED</span>
-        <span class="stripe-number">2014</span>
-        <p class="stripe-desc">A decade of crafting bold brand identities</p>
+        <span class="stripe-number">2022</span>
+        <p class="stripe-desc">Crafting bold brand identities since July 2022</p>
       </div>
       <div class="stripe-line"></div>
     </div>
     <!-- WHITE STRIPE -->
     <div class="stripe stripe-white" [class.stripe-hovered]="hoveredStripe() === 1" [class.stripe-shrunk]="hoveredStripe() !== null && hoveredStripe() !== 1" (mouseenter)="hoveredStripe.set(1)" (mouseleave)="hoveredStripe.set(null)">
       <div class="stripe-content">
-        <span class="stripe-label" style="color:#0a0a0a">OUR CRAFT</span>
-        <span class="stripe-number" style="color:#0a0a0a">PRINT</span>
-        <p class="stripe-desc" style="color:#333">From concept to flawless execution on every surface</p>
+        <span class="stripe-label" style="color:#0a0a0a">OUR PROMISE</span>
+        <span class="stripe-number" style="color:#0a0a0a">QUALITY</span>
+        <p class="stripe-desc" style="color:#333">Quick turnaround. Quality results. Every time.</p>
       </div>
       <div class="stripe-line" style="background:#0a0a0a"></div>
     </div>
     <!-- RED STRIPE -->
     <div class="stripe stripe-red" [class.stripe-hovered]="hoveredStripe() === 2" [class.stripe-shrunk]="hoveredStripe() !== null && hoveredStripe() !== 2" (mouseenter)="hoveredStripe.set(2)" (mouseleave)="hoveredStripe.set(null)">
       <div class="stripe-content">
-        <span class="stripe-label">MAKE YOUR MARK</span>
-        <span class="stripe-number">BOLD.</span>
-        <p class="stripe-desc">Premium materials. Uncompromising standards.</p>
+        <span class="stripe-label">YOUR BRAND</span>
+        <span class="stripe-number">SEEN.</span>
+        <p class="stripe-desc">Make your brand seen, trusted, chosen.</p>
       </div>
       <div class="stripe-line"></div>
     </div>
@@ -67,113 +67,148 @@
     </div>
   </section>
   <div class="cta-bar">
-    <span class="cta-text">Ready to stand out?</span>
-    <button class="cta-btn" onclick="document.getElementById('contact-section').scrollIntoView({behavior: 'smooth'})">GET A QUOTE <span class="cta-arrow">→</span></button>
+    <span class="cta-text">Make Your Brand Seen, Trusted, Chosen.</span>
+    <button class="cta-btn" (click)="scrollTo('contact-section')">GET A QUOTE <span class="cta-arrow">→</span></button>
   </div>
 </div>
 
-<!-- ABOUT US SECTION -->
+<!-- ABOUT SECTION -->
 <section class="about-section py-24 px-8 md:px-16 bg-white text-[#0a0a0a]">
   <div class="max-w-7xl mx-auto">
     <div class="mb-16 text-center">
-      <h2 class="text-3xl md:text-5xl font-display font-bold mb-4">WE ARE <span class="text-[#e10600]">BRAVION</span></h2>
-      <div class="w-16 h-1 bg-[#e10600] mx-auto"></div>
+      <h2 class="text-3xl md:text-5xl font-heading font-bold mb-4">ABOUT <span class="text-[#e10600]">BRAVION PRINTERS</span></h2>
+      <div class="w-16 h-1 bg-[#e10600] mx-auto mb-6"></div>
+      <p class="text-gray-500 text-sm max-w-2xl mx-auto">Complete branding solutions that grow your business. Established in July 2022, we are your trusted one-stop branding and printing partner in Kenya.</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <!-- Who We Are -->
       <div class="about-card p-8 bg-[#f5f5f3] border border-gray-200 hover:border-[#e10600]/50 transition-all duration-300 transform hover:-translate-y-2 group">
-        <h3 class="text-xl font-display font-bold mb-4 group-hover:text-[#e10600] transition-colors">WHO WE ARE</h3>
+        <h3 class="text-xl font-heading font-bold mb-4 group-hover:text-[#e10600] transition-colors">WHO WE ARE</h3>
         <p class="text-gray-600 text-sm leading-relaxed">
-          A collective of visionary designers, meticulous printers, and brand strategists dedicated to creating unforgettable impressions. We blend artistry with precision engineering.
+          Bravion Printers Ltd is a modern, professional, and creative one-stop branding and printing company based in Kilimani, Nairobi. We handle everything from vehicle branding to corporate stationery.
         </p>
       </div>
       <!-- Our Mission -->
       <div class="about-card p-8 bg-[#f5f5f3] border border-gray-200 hover:border-[#e10600]/50 transition-all duration-300 transform hover:-translate-y-2 group">
-        <h3 class="text-xl font-display font-bold mb-4 group-hover:text-[#e10600] transition-colors">OUR MISSION</h3>
+        <h3 class="text-xl font-heading font-bold mb-4 group-hover:text-[#e10600] transition-colors">OUR MISSION</h3>
         <p class="text-gray-600 text-sm leading-relaxed">
-          To elevate brands beyond the ordinary. We deliver premium quality print and design solutions that command attention and communicate absolute authority in the market.
+          To provide complete branding solutions with quick turnaround and quality results. We design, we brand, you grow. All your branding needs, one trusted partner.
         </p>
       </div>
       <!-- Our Vision -->
       <div class="about-card p-8 bg-[#f5f5f3] border border-gray-200 hover:border-[#e10600]/50 transition-all duration-300 transform hover:-translate-y-2 group">
-        <h3 class="text-xl font-display font-bold mb-4 group-hover:text-[#e10600] transition-colors">OUR VISION</h3>
+        <h3 class="text-xl font-heading font-bold mb-4 group-hover:text-[#e10600] transition-colors">OUR VISION</h3>
         <p class="text-gray-600 text-sm leading-relaxed">
-          Setting the global standard for high-end print production and brand identity, proving that tangible, physical branding still reigns supreme in a digital world.
+          To be one of the leading modern branding companies in Kenya, known for professionalism, creativity, trust, and strong visual identity in every project we deliver.
         </p>
       </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
+      @for (stat of stats; track stat.label) {
+        <div class="text-center p-6 border border-gray-200 hover:border-[#e10600] transition-colors">
+          <span class="block text-3xl md:text-4xl font-heading font-extrabold text-[#e10600]">{{ stat.value }}</span>
+          <span class="text-xs font-semibold tracking-widest text-gray-500 uppercase mt-2 block">{{ stat.label }}</span>
+        </div>
+      }
     </div>
   </div>
 </section>
 
-<!-- PRODUCTS & SERVICES SECTION -->
-<section  id="services-section" class="services-section py-24 px-8 md:px-16 bg-[#f5f5f3] text-[#0a0a0a] overflow-hidden">
+<!-- SERVICES SECTION -->
+<section id="services-section" class="services-section py-24 px-8 md:px-16 bg-[#0a0a0a] text-white overflow-hidden">
   <div class="max-w-7xl mx-auto">
     <div class="mb-16 flex flex-col md:flex-row justify-between items-end gap-6">
       <div>
-        <h2 class="text-3xl md:text-5xl font-display font-bold mb-4">OUR EXPERTISE</h2>
+        <h2 class="text-3xl md:text-5xl font-heading font-bold mb-4">OUR <span class="text-[#e10600]">SERVICES</span></h2>
         <div class="w-16 h-1 bg-[#e10600]"></div>
       </div>
-      <p class="text-gray-600 max-w-md text-sm">Comprehensive solutions tailored for brands that refuse to compromise on quality.</p>
+      <p class="text-gray-400 max-w-md text-sm">Comprehensive branding solutions tailored for businesses that refuse to compromise on quality.</p>
     </div>
 
-    <div class="flex flex-col gap-6">
-      
-      <!-- Design Row -->
-      <div class="service-card p-8 bg-white shadow-xl shadow-black/5 flex flex-col md:flex-row items-center text-center md:text-left gap-8 border-l-4 border-transparent hover:border-[#e10600] anim-from-left" [class.is-visible]="showServices()">
-        <div class="w-16 h-16 text-[#e10600] shrink-0 flex items-center justify-center bg-[#f5f5f3] rounded-full">
-          <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.879-3.879a3 3 0 10-4.242-4.242l-3.879 3.879a15.994 15.994 0 00-4.648 4.764m3.879-3.879l3.182-3.182m0 0l-3.182 3.182m3.182-3.182L15 6.22m3.182 3.182l-3.182 3.182" /></svg>
-        </div>
-        <div class="flex-grow">
-          <h3 class="text-2xl font-display font-bold mb-2">DESIGN</h3>
-          <p class="text-gray-600 text-sm max-w-2xl">Bespoke visual identities, layout structuring, and creative direction tailored to separate your brand from the noise.</p>
-        </div>
-        <a routerLink="/services/design" class="shrink-0 group inline-flex items-center text-xs font-bold tracking-widest text-white bg-[#0a0a0a] px-8 py-4 hover:bg-[#e10600] transition-colors" style="clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);">
-          READ MORE <span class="ml-2 transform group-hover:translate-x-1 transition-transform">→</span>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      @for (service of services; track service.title; let i = $index) {
+        <a [routerLink]="service.link"
+           class="service-card group relative overflow-hidden bg-[#111] border border-white/5 hover:border-[#e10600]/40 transition-all duration-500"
+           [class.anim-from-left]="i % 2 === 0"
+           [class.anim-from-right]="i % 2 !== 0"
+           [class.is-visible]="showServices()"
+           [style.transition-delay]="(i * 100) + 'ms'">
+          <div class="relative h-48 overflow-hidden">
+            <img [src]="service.image" [alt]="service.title" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] to-transparent"></div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-heading font-bold mb-2 group-hover:text-[#e10600] transition-colors">{{ service.title }}</h3>
+            <p class="text-gray-400 text-xs leading-relaxed mb-4">{{ service.desc }}</p>
+            <span class="inline-flex items-center text-[#e10600] text-xs font-bold tracking-wider uppercase group-hover:gap-3 gap-2 transition-all">
+              Explore <span>→</span>
+            </span>
+          </div>
         </a>
-      </div>
+      }
+    </div>
 
-      <!-- Print Row -->
-      <div class="service-card p-8 bg-white shadow-xl shadow-black/5 flex flex-col md:flex-row items-center text-center md:text-left gap-8 border-l-4 border-transparent hover:border-[#e10600] anim-from-right" [class.is-visible]="showServices()" style="transition-delay: 150ms;">
-        <div class="w-16 h-16 text-[#e10600] shrink-0 flex items-center justify-center bg-[#f5f5f3] rounded-full">
-          <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6.72 13.829c-.24.03-.48.062-.72.096m.72-.096a42.415 42.415 0 0110.56 0m-10.56 0L6.34 18m10.94-4.171c.24.03.48.062.72.096m-.72-.096L17.66 18m0 0l.229 2.523a1.125 1.125 0 01-1.12 1.227H7.231c-.662 0-1.18-.568-1.12-1.227L6.34 18m11.318 0h1.091A2.25 2.25 0 0021 15.75V9.456c0-1.081-.768-2.015-1.837-2.175a48.055 48.055 0 00-1.913-.247M6.34 18H5.25A2.25 2.25 0 013 15.75V9.456c0-1.081.768-2.015 1.837-2.175a48.041 48.041 0 011.913-.247m10.5 0a48.536 48.536 0 00-10.5 0m10.5 0V3.375c0-.621-.504-1.125-1.125-1.125h-8.25c-.621 0-1.125.504-1.125 1.125v3.659M18 10.5h.008v.008H18V10.5zm-3 0h.008v.008H15V10.5z" /></svg>
+    <div class="text-center mt-12">
+      <a routerLink="/services" class="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-white bg-[#e10600] px-8 py-4 hover:bg-[#c00500] transition-colors" style="clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);">
+        VIEW ALL SERVICES <span>→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US SECTION -->
+<section id="why-section" class="py-24 px-8 md:px-16 bg-white text-[#0a0a0a]">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-5xl font-heading font-bold mb-4">WHY <span class="text-[#e10600]">CHOOSE US</span></h2>
+      <div class="w-16 h-1 bg-[#e10600] mx-auto mb-6"></div>
+      <p class="text-gray-500 text-sm max-w-xl mx-auto">We deliver complete branding solutions with unmatched quality, creativity, and reliability.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      @for (item of whyChooseUs; track item.title; let i = $index) {
+        <div class="p-8 border border-gray-200 hover:border-[#e10600] transition-all duration-300 hover:-translate-y-2 group text-center"
+             [class.anim-from-left]="i % 2 === 0"
+             [class.anim-from-right]="i % 2 !== 0"
+             [class.is-visible]="showWhy()"
+             [style.transition-delay]="(i * 80) + 'ms'">
+          <span class="text-4xl block mb-4">{{ item.icon }}</span>
+          <h3 class="font-heading font-bold text-lg mb-2 group-hover:text-[#e10600] transition-colors">{{ item.title }}</h3>
+          <p class="text-gray-500 text-sm">{{ item.desc }}</p>
         </div>
-        <div class="flex-grow">
-          <h3 class="text-2xl font-display font-bold mb-2">PRINT</h3>
-          <p class="text-gray-600 text-sm max-w-2xl">State-of-the-art lithographic and digital printing providing flawless color accuracy on premium materials.</p>
-        </div>
-        <a routerLink="/services/print" class="shrink-0 group inline-flex items-center text-xs font-bold tracking-widest text-white bg-[#0a0a0a] px-8 py-4 hover:bg-[#e10600] transition-colors" style="clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);">
-          READ MORE <span class="ml-2 transform group-hover:translate-x-1 transition-transform">→</span>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO SECTION -->
+<section id="portfolio-section" class="py-24 px-8 md:px-16 bg-[#f5f5f3] text-[#0a0a0a]">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-5xl font-heading font-bold mb-4">OUR <span class="text-[#e10600]">PORTFOLIO</span></h2>
+      <div class="w-16 h-1 bg-[#e10600] mx-auto mb-6"></div>
+      <p class="text-gray-500 text-sm max-w-xl mx-auto">A visual showcase of our best branding work across all service categories.</p>
+    </div>
+    <div class="portfolio-grid"
+         [class.anim-from-left]="true"
+         [class.is-visible]="showPortfolio()">
+      @for (service of services; track service.title) {
+        <a [routerLink]="service.link" class="portfolio-item group relative overflow-hidden cursor-pointer">
+          <img [src]="service.image" [alt]="service.title" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors duration-300 flex items-end p-6">
+            <div class="transform group-hover:-translate-y-2 transition-transform duration-300">
+              <h4 class="text-white font-heading font-bold text-lg">{{ service.title }}</h4>
+              <span class="text-[#e10600] text-xs font-bold tracking-wider uppercase">View Work →</span>
+            </div>
+          </div>
         </a>
-      </div>
-
-      <!-- Brand Row -->
-      <div class="service-card p-8 bg-white shadow-xl shadow-black/5 flex flex-col md:flex-row items-center text-center md:text-left gap-8 border-l-4 border-transparent hover:border-[#e10600] anim-from-left" [class.is-visible]="showServices()" style="transition-delay: 300ms;">
-        <div class="w-16 h-16 text-[#e10600] shrink-0 flex items-center justify-center bg-[#f5f5f3] rounded-full">
-          <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" /></svg>
-        </div>
-        <div class="flex-grow">
-          <h3 class="text-2xl font-display font-bold mb-2">BRAND</h3>
-          <p class="text-gray-600 text-sm max-w-2xl">Full-spectrum brand positioning, corporate guidelines, and cohesive market strategy across all touchpoints.</p>
-        </div>
-        <a routerLink="/services/brand" class="shrink-0 group inline-flex items-center text-xs font-bold tracking-widest text-white bg-[#0a0a0a] px-8 py-4 hover:bg-[#e10600] transition-colors" style="clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);">
-          READ MORE <span class="ml-2 transform group-hover:translate-x-1 transition-transform">→</span>
-        </a>
-      </div>
-
-      <!-- Stationery Row -->
-      <div class="service-card p-8 bg-white shadow-xl shadow-black/5 flex flex-col md:flex-row items-center text-center md:text-left gap-8 border-l-4 border-transparent hover:border-[#e10600] anim-from-right" [class.is-visible]="showServices()" style="transition-delay: 450ms;">
-        <div class="w-16 h-16 text-[#e10600] shrink-0 flex items-center justify-center bg-[#f5f5f3] rounded-full">
-          <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z" /><path stroke-linecap="round" stroke-linejoin="round" d="M4.867 19.125h.008v.008h-.008v-.008z" /></svg>
-        </div>
-        <div class="flex-grow">
-          <h3 class="text-2xl font-display font-bold mb-2">STATIONERY</h3>
-          <p class="text-gray-600 text-sm max-w-2xl">High-end business cards, luxurious letterheads, and beautifully textured materials that leave a tactile mark.</p>
-        </div>
-        <a routerLink="/services/stationery" class="shrink-0 group inline-flex items-center text-xs font-bold tracking-widest text-white bg-[#0a0a0a] px-8 py-4 hover:bg-[#e10600] transition-colors" style="clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);">
-          READ MORE <span class="ml-2 transform group-hover:translate-x-1 transition-transform">→</span>
-        </a>
-      </div>
-
+      }
+    </div>
+    <div class="text-center mt-12">
+      <a routerLink="/portfolio" class="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-white bg-[#0a0a0a] px-8 py-4 hover:bg-[#e10600] transition-colors" style="clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);">
+        VIEW FULL PORTFOLIO <span>→</span>
+      </a>
     </div>
   </div>
 </section>
@@ -183,30 +218,92 @@
   <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 justify-between">
     <h3 class="text-xs font-bold tracking-[0.3em] text-gray-500 uppercase shrink-0">Trusted By</h3>
     <div class="flex-grow flex flex-wrap justify-center md:justify-end gap-6 md:gap-10">
-      <!-- Readable logo blocks -->
-      <div class="px-6 py-4 border border-white/20 text-gray-500 font-bold text-sm tracking-widest hover:border-white hover:text-white transition-colors cursor-pointer">PARTNER INC.</div>
-      <div class="px-6 py-4 border border-white/20 text-gray-500 font-bold text-sm tracking-widest hover:border-white hover:text-white transition-colors cursor-pointer">GLOBAL CO.</div>
-      <div class="px-6 py-4 border border-white/20 text-gray-500 font-bold text-sm tracking-widest hover:border-white hover:text-white transition-colors cursor-pointer">STUDIO XYZ</div>
-      <div class="px-6 py-4 border border-white/20 text-gray-500 font-bold text-sm tracking-widest hover:border-white hover:text-white transition-colors cursor-pointer">BRAND LTD.</div>
+      <!-- Placeholder client logos -->
+      <div class="px-6 py-4 border border-white/20 text-gray-500 font-bold text-sm tracking-widest hover:border-white hover:text-white transition-colors cursor-pointer">AAR</div>
+      <div class="px-6 py-4 border border-white/20 text-gray-500 font-bold text-sm tracking-widest hover:border-white hover:text-white transition-colors cursor-pointer">AMREF</div>
+      <div class="px-6 py-4 border border-white/20 text-gray-500 font-bold text-sm tracking-widest hover:border-white hover:text-white transition-colors cursor-pointer">COCA-COLA</div>
+      <div class="px-6 py-4 border border-white/20 text-gray-500 font-bold text-sm tracking-widest hover:border-white hover:text-white transition-colors cursor-pointer">VILLAGES OF AFRICA</div>
+      <div class="px-6 py-4 border border-white/20 text-gray-500 font-bold text-sm tracking-widest hover:border-white hover:text-white transition-colors cursor-pointer">NAIROBI WATER</div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS SECTION -->
+<section class="py-24 px-8 md:px-16 bg-[#111] text-white">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl md:text-5xl font-heading font-bold mb-4">WHAT OUR <span class="text-[#e10600]">CLIENTS SAY</span></h2>
+    <div class="w-16 h-1 bg-[#e10600] mx-auto mb-12"></div>
+
+    <div class="relative min-h-[200px]">
+      @for (testimonial of testimonials; track testimonial.name; let i = $index) {
+        <div class="testimonial-slide" [class.testimonial-active]="activeTestimonial() === i">
+          <svg class="mx-auto mb-6 text-[#e10600]" width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10H0z"/></svg>
+          <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-6 italic">"{{ testimonial.text }}"</p>
+          <span class="font-heading font-bold text-white">{{ testimonial.name }}</span>
+          <span class="block text-xs text-[#e10600] tracking-wider mt-1">{{ testimonial.company }}</span>
+        </div>
+      }
+    </div>
+
+    <div class="flex justify-center gap-3 mt-8">
+      @for (testimonial of testimonials; track $index) {
+        <button class="w-2.5 h-2.5 rounded-full transition-all duration-300" [class]="activeTestimonial() === $index ? 'bg-[#e10600] w-8 rounded-sm' : 'bg-white/20'" (click)="activeTestimonial.set($index)"></button>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="py-24 px-8 md:px-16 bg-[#e10600] text-white text-center relative overflow-hidden">
+  <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2260%22 height=%2260%22%3E%3Crect width=%2260%22 height=%2260%22 fill=%22none%22 stroke=%22white%22 stroke-width=%220.5%22/%3E%3C/svg%3E');"></div>
+  <div class="relative max-w-3xl mx-auto">
+    <h2 class="text-3xl md:text-5xl font-heading font-extrabold mb-4">WE DESIGN. WE BRAND. YOU GROW.</h2>
+    <p class="text-white/80 text-sm mb-10 max-w-lg mx-auto">Ready to take your brand to the next level? Let's create something extraordinary together.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a routerLink="/contact" class="inline-flex items-center justify-center gap-2 text-sm font-bold tracking-widest px-10 py-4 bg-white text-[#e10600] hover:bg-[#0a0a0a] hover:text-white transition-colors" style="clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);">
+        REQUEST QUOTE
+      </a>
+      <a href="https://wa.me/254726612470?text=Hello%20Bravion%20Printers!%20I%27d%20like%20to%20inquire%20about%20your%20services." target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 text-sm font-bold tracking-widest px-10 py-4 border-2 border-white text-white hover:bg-white hover:text-[#e10600] transition-colors" style="clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);">
+        WHATSAPP US
+      </a>
     </div>
   </div>
 </section>
 
 <!-- CONTACT SECTION -->
-<section id="contact-section" class="contact-section py-24 px-8 md:px-16 bg-[#111] text-white">
+<section id="contact-section" class="contact-section py-24 px-8 md:px-16 bg-[#0a0a0a] text-white">
   <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl md:text-5xl font-display font-bold mb-4">START A PROJECT</h2>
-    <p class="text-gray-400 mb-12 text-sm">Let’s discuss how we can elevate your brand through premium design and print.</p>
+    <h2 class="text-3xl md:text-5xl font-heading font-bold mb-4">START A <span class="text-[#e10600]">PROJECT</span></h2>
+    <p class="text-gray-400 mb-12 text-sm">Let's discuss how we can elevate your brand through premium design and print.</p>
     
     <form class="flex flex-col gap-6 text-left max-w-2xl mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="flex flex-col">
-          <label class="text-xs font-bold tracking-widest text-gray-500 mb-2">CLIENT NAME</label>
+          <label class="text-xs font-bold tracking-widest text-gray-500 mb-2">YOUR NAME</label>
           <input type="text" class="bg-transparent border-b border-white/20 pb-2 text-white focus:outline-none focus:border-[#e10600] transition-colors" placeholder="John Doe">
         </div>
         <div class="flex flex-col">
+          <label class="text-xs font-bold tracking-widest text-gray-500 mb-2">PHONE NUMBER</label>
+          <input type="tel" class="bg-transparent border-b border-white/20 pb-2 text-white focus:outline-none focus:border-[#e10600] transition-colors" placeholder="0726 612 470">
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="flex flex-col">
           <label class="text-xs font-bold tracking-widest text-gray-500 mb-2">EMAIL ADDRESS</label>
           <input type="email" class="bg-transparent border-b border-white/20 pb-2 text-white focus:outline-none focus:border-[#e10600] transition-colors" placeholder="john@example.com">
+        </div>
+        <div class="flex flex-col">
+          <label class="text-xs font-bold tracking-widest text-gray-500 mb-2">SERVICE INTEREST</label>
+          <select class="bg-transparent border-b border-white/20 pb-2 text-white focus:outline-none focus:border-[#e10600] transition-colors">
+            <option value="" style="color:#333">Select a service</option>
+            <option value="vehicle" style="color:#333">Vehicle Branding</option>
+            <option value="signage" style="color:#333">Signage & Shop Branding</option>
+            <option value="corporate" style="color:#333">Corporate Apparel & Gifts</option>
+            <option value="office" style="color:#333">Office & Glass Branding</option>
+            <option value="events" style="color:#333">Events & Promotional</option>
+            <option value="digital" style="color:#333">Digital Design</option>
+            <option value="printing" style="color:#333">Printing & Stationery</option>
+          </select>
         </div>
       </div>
       <div class="flex flex-col mt-4">
@@ -221,45 +318,3 @@
     </form>
   </div>
 </section>
-
-<!-- FOOTER -->
-<footer class="bg-[#050505] py-16 px-8 text-white border-t border-white/5">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-sm">
-    <!-- Brand Info -->
-    <div class="flex flex-col gap-4">
-      <span class="font-display font-bold tracking-widest text-xl">BRAVION.</span>
-      <p class="text-gray-500 max-w-xs leading-relaxed">
-        Elevating brands through premium quality print and design solutions.
-      </p>
-    </div>
-    
-    <!-- Contact Info -->
-    <div class="flex flex-col gap-4">
-      <h4 class="font-bold tracking-widest text-gray-400">CONTACT</h4>
-      <a href="tel:+254700000000" class="text-gray-500 hover:text-white transition-colors">+254 700 000 000</a>
-      <a href="mailto:hello@bravion.com" class="text-gray-500 hover:text-white transition-colors">hello&#64;bravion.com</a>
-    </div>
-
-    <!-- Location -->
-    <div class="flex flex-col gap-4">
-      <h4 class="font-bold tracking-widest text-gray-400">LOCATION</h4>
-      <span class="text-gray-500">Nairobi, Kenya</span>
-      <span class="text-gray-500">Global Delivery</span>
-    </div>
-
-    <!-- Socials -->
-    <div class="flex flex-col gap-4">
-      <h4 class="font-bold tracking-widest text-gray-400">SOCIALS</h4>
-      <div class="flex flex-col gap-2">
-        <a href="#" class="text-gray-500 hover:text-white transition-colors">INSTAGRAM</a>
-        <a href="#" class="text-gray-500 hover:text-white transition-colors">LINKEDIN</a>
-        <a href="#" class="text-gray-500 hover:text-white transition-colors">BEHANCE</a>
-      </div>
-    </div>
-  </div>
-  
-  <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-    <span class="text-gray-600 text-xs font-bold tracking-widest">© 2026 BRAVION. ALL RIGHTS RESERVED.</span>
-    <span class="text-gray-600 text-xs font-bold tracking-widest">DESIGNED WITH PRECISION</span>
-  </div>
-</footer>

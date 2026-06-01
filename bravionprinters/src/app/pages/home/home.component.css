@@ -375,3 +375,33 @@
   opacity: 1;
   transform: translateX(0);
 }
+
+/* PORTFOLIO GRID */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+.portfolio-item {
+  height: 300px;
+  border-radius: 4px;
+}
+
+/* TESTIMONIALS */
+.testimonial-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+.testimonial-active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  position: relative;
+}
+
