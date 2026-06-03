@@ -350,44 +350,33 @@
   transform: translateX(3px);
 }
 
-/* Placeholder Logo Masks */
-.mask-logo-1 { clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%); }
-.mask-logo-2 { clip-path: circle(50% at 50% 50%); }
-.mask-logo-3 { clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); }
-.mask-logo-4 { clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%); }
-
-/* ─────────────────────────────────────────────────────
-   SCROLL ANIMATIONS (4 Rows)
-───────────────────────────────────────────────────── */
+/* ====== TRANSITION ANIMATIONS ====== */
+/* Use translateY for Why Choose Us cards so hover translateY doesn't conflict */
 .anim-from-left {
   opacity: 0;
-  transform: translateX(-60px);
+  transform: translateY(50px);
   transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .anim-from-right {
   opacity: 0;
-  transform: translateX(60px);
+  transform: translateY(50px);
   transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .is-visible {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
-/* PORTFOLIO GRID */
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-}
-.portfolio-item {
-  height: 300px;
-  border-radius: 4px;
+/* Force hover effect to win over the .is-visible resting transform */
+.is-visible:hover {
+  opacity: 1;
+  transform: translateY(-12px) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
-/* TESTIMONIALS */
+/* ====== TESTIMONIALS ====== */
 .testimonial-slide {
   position: absolute;
   top: 0;
@@ -405,3 +394,75 @@
   position: relative;
 }
 
+/* ====== PREMIUM SERVICES SECTION ====== */
+.services-section-premium {
+  background-color: #050505;
+}
+
+/* Subtle Dot Grid Background */
+.svc-bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Radial Glows for Depth */
+.svc-glow {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(225, 6, 0, 0.05) 0%, rgba(225, 6, 0, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.svc-glow-left {
+  top: -150px;
+  left: -250px;
+}
+.svc-glow-right {
+  bottom: -150px;
+  right: -250px;
+}
+
+/* Staggered Fade Up Animations */
+.svc-anim {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.svc-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ====== SERVICE CARD HOVER EFFECTS ====== */
+/* These must live in the component CSS to override the .svc-anim transform property */
+.svc-card {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  border-radius: 0.75rem;
+  transition:
+    transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.45s ease,
+    opacity 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Override the resting svc-visible state on hover */
+.svc-card.svc-visible:hover {
+  transform: translateY(-10px) !important;
+  box-shadow: 0 20px 50px rgba(225, 6, 0, 0.2);
+}
+
+/* ====== NAVBAR & GENERAL BUTTON HOVER ====== */
+.nav-cta,
+.cta-btn {
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.nav-cta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(225, 6, 0, 0.4);
+}

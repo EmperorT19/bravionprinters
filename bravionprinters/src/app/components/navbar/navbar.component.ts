@@ -11,7 +11,7 @@ import { RouterModule } from '@angular/router';
       <div class="nav-inner">
         <!-- Logo -->
         <a routerLink="/" class="nav-logo">
-          <img src="/bravion_logo.png" alt="Bravion Printers Ltd" class="logo-img" />
+          <img src="bravion_logo.png" alt="Bravion Printers Ltd" class="logo-img" />
         </a>
 
         <!-- Desktop Nav -->
@@ -21,24 +21,12 @@ import { RouterModule } from '@angular/router';
           <li class="has-dropdown" (mouseenter)="showDropdown.set(true)" (mouseleave)="showDropdown.set(false)">
             <a routerLink="/services" routerLinkActive="active">Services <span class="chevron">▾</span></a>
             <ul class="dropdown" [class.dropdown-open]="showDropdown()">
-              <li class="px-6 py-2 text-[10px] font-bold tracking-widest text-[#e10600] uppercase mt-2">Design</li>
-              <li><a routerLink="/digital-design" routerLinkActive="active">Digital & Graphic Design</a></li>
-              
-              <li class="px-6 py-2 text-[10px] font-bold tracking-widest text-[#e10600] uppercase mt-2 border-t border-white/10">Print</li>
-              <li><a routerLink="/printing-stationery" routerLinkActive="active">Commercial Printing</a></li>
-              
-              <li class="px-6 py-2 text-[10px] font-bold tracking-widest text-[#e10600] uppercase mt-2 border-t border-white/10">Brand</li>
-              <li><a routerLink="/vehicle-branding" routerLinkActive="active">Vehicle Branding</a></li>
-              <li><a routerLink="/signage-branding" routerLinkActive="active">Signage & Shop Branding</a></li>
-              <li><a routerLink="/corporate-branding" routerLinkActive="active">Corporate Apparel & Gifts</a></li>
-              <li><a routerLink="/office-branding" routerLinkActive="active">Office & Glass Branding</a></li>
-              <li><a routerLink="/event-branding" routerLinkActive="active">Events & Promotional</a></li>
-              
-              <li class="px-6 py-2 text-[10px] font-bold tracking-widest text-[#e10600] uppercase mt-2 border-t border-white/10">Stationery</li>
-              <li><a routerLink="/printing-stationery" routerLinkActive="active">Corporate Stationery</a></li>
+              <li><a routerLink="/design" routerLinkActive="active">Design Services</a></li>
+              <li><a routerLink="/print" routerLinkActive="active">Print Services</a></li>
+              <li><a routerLink="/brand" routerLinkActive="active">Brand Services</a></li>
+              <li><a routerLink="/stationery" routerLinkActive="active">Stationery Services</a></li>
             </ul>
           </li>
-          <li><a routerLink="/portfolio" routerLinkActive="active">Portfolio</a></li>
           <li><a routerLink="/clients" routerLinkActive="active">Clients</a></li>
           <li><a routerLink="/blog" routerLinkActive="active">Blog</a></li>
           <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
@@ -60,22 +48,11 @@ import { RouterModule } from '@angular/router';
         <a routerLink="/" (click)="mobileOpen.set(false)">Home</a>
         <a routerLink="/about" (click)="mobileOpen.set(false)">About</a>
         <a routerLink="/services" (click)="mobileOpen.set(false)">Services</a>
-        <div class="px-6 py-2 text-[10px] font-bold tracking-widest text-[#e10600] uppercase mt-2">Design</div>
-        <a routerLink="/digital-design" (click)="mobileOpen.set(false)" class="sub-link">↳ Digital & Graphic Design</a>
-        
-        <div class="px-6 py-2 text-[10px] font-bold tracking-widest text-[#e10600] uppercase mt-2">Print</div>
-        <a routerLink="/printing-stationery" (click)="mobileOpen.set(false)" class="sub-link">↳ Commercial Printing</a>
-        
-        <div class="px-6 py-2 text-[10px] font-bold tracking-widest text-[#e10600] uppercase mt-2">Brand</div>
-        <a routerLink="/vehicle-branding" (click)="mobileOpen.set(false)" class="sub-link">↳ Vehicle Branding</a>
-        <a routerLink="/signage-branding" (click)="mobileOpen.set(false)" class="sub-link">↳ Signage & Shop</a>
-        <a routerLink="/corporate-branding" (click)="mobileOpen.set(false)" class="sub-link">↳ Corporate Apparel</a>
-        <a routerLink="/office-branding" (click)="mobileOpen.set(false)" class="sub-link">↳ Office Branding</a>
-        <a routerLink="/event-branding" (click)="mobileOpen.set(false)" class="sub-link">↳ Events</a>
-        
-        <div class="px-6 py-2 text-[10px] font-bold tracking-widest text-[#e10600] uppercase mt-2">Stationery</div>
-        <a routerLink="/printing-stationery" (click)="mobileOpen.set(false)" class="sub-link">↳ Corporate Stationery</a>
-        <a routerLink="/portfolio" (click)="mobileOpen.set(false)">Portfolio</a>
+        <div class="px-6 py-2 text-[10px] font-bold tracking-widest text-[#e10600] uppercase mt-2">Our Services</div>
+        <a routerLink="/design" (click)="mobileOpen.set(false)" class="sub-link">↳ Design Services</a>
+        <a routerLink="/print" (click)="mobileOpen.set(false)" class="sub-link">↳ Print Services</a>
+        <a routerLink="/brand" (click)="mobileOpen.set(false)" class="sub-link">↳ Brand Services</a>
+        <a routerLink="/stationery" (click)="mobileOpen.set(false)" class="sub-link">↳ Stationery Services</a>
         <a routerLink="/clients" (click)="mobileOpen.set(false)">Clients</a>
         <a routerLink="/blog" (click)="mobileOpen.set(false)">Blog</a>
         <a routerLink="/contact" (click)="mobileOpen.set(false)">Contact</a>
@@ -190,7 +167,8 @@ import { RouterModule } from '@angular/router';
     }
     .nav-cta:hover {
       background: #c00500;
-      transform: scale(1.03);
+      transform: scale(1.05) translateY(-1px);
+      box-shadow: 0 8px 20px rgba(225,6,0,0.4);
     }
     .mobile-toggle {
       display: none;

@@ -68,165 +68,18 @@
   </section>
   <div class="cta-bar">
     <span class="cta-text">Make Your Brand Seen, Trusted, Chosen.</span>
-    <button class="cta-btn" (click)="scrollTo('contact-section')">GET A QUOTE <span class="cta-arrow">→</span></button>
+    <button class="cta-btn" routerLink="/contact">GET A QUOTE <span class="cta-arrow">→</span></button>
   </div>
 </div>
 
-<!-- ABOUT SECTION -->
-<section class="about-section py-24 px-8 md:px-16 bg-white text-[#0a0a0a]">
-  <div class="max-w-7xl mx-auto">
-    <div class="mb-16 text-center">
-      <h2 class="text-3xl md:text-5xl font-heading font-bold mb-4">ABOUT <span class="text-[#e10600]">BRAVION PRINTERS</span></h2>
-      <div class="w-16 h-1 bg-[#e10600] mx-auto mb-6"></div>
-      <p class="text-gray-500 text-sm max-w-2xl mx-auto">Complete branding solutions that grow your business. Established in July 2022, we are your trusted one-stop branding and printing partner in Kenya.</p>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <!-- Who We Are -->
-      <div class="about-card p-8 bg-[#f5f5f3] border border-gray-200 hover:border-[#e10600]/50 transition-all duration-300 transform hover:-translate-y-2 group">
-        <h3 class="text-xl font-heading font-bold mb-4 group-hover:text-[#e10600] transition-colors">WHO WE ARE</h3>
-        <p class="text-gray-600 text-sm leading-relaxed">
-          Bravion Printers Ltd is a modern, professional, and creative one-stop branding and printing company based in Kilimani, Nairobi. We handle everything from vehicle branding to corporate stationery.
-        </p>
-      </div>
-      <!-- Our Mission -->
-      <div class="about-card p-8 bg-[#f5f5f3] border border-gray-200 hover:border-[#e10600]/50 transition-all duration-300 transform hover:-translate-y-2 group">
-        <h3 class="text-xl font-heading font-bold mb-4 group-hover:text-[#e10600] transition-colors">OUR MISSION</h3>
-        <p class="text-gray-600 text-sm leading-relaxed">
-          To provide complete branding solutions with quick turnaround and quality results. We design, we brand, you grow. All your branding needs, one trusted partner.
-        </p>
-      </div>
-      <!-- Our Vision -->
-      <div class="about-card p-8 bg-[#f5f5f3] border border-gray-200 hover:border-[#e10600]/50 transition-all duration-300 transform hover:-translate-y-2 group">
-        <h3 class="text-xl font-heading font-bold mb-4 group-hover:text-[#e10600] transition-colors">OUR VISION</h3>
-        <p class="text-gray-600 text-sm leading-relaxed">
-          To be one of the leading modern branding companies in Kenya, known for professionalism, creativity, trust, and strong visual identity in every project we deliver.
-        </p>
-      </div>
-    </div>
+<!-- ABOUT SECTION (embedded from AboutComponent) -->
+<app-about [isHomeSection]="true"></app-about>
 
-    <!-- Stats -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
-      @for (stat of stats; track stat.label) {
-        <div class="text-center p-6 border border-gray-200 hover:border-[#e10600] transition-colors">
-          <span class="block text-3xl md:text-4xl font-heading font-extrabold text-[#e10600]">{{ stat.value }}</span>
-          <span class="text-xs font-semibold tracking-widest text-gray-500 uppercase mt-2 block">{{ stat.label }}</span>
-        </div>
-      }
-    </div>
-  </div>
-</section>
+<!-- SERVICES SECTION (embedded from ServicesComponent) -->
+<app-services [isHomeSection]="true"></app-services>
 
-<!-- SERVICES SECTION -->
-<section id="services-section" class="services-section py-24 px-8 md:px-16 bg-[#0a0a0a] text-white overflow-hidden">
-  <div class="max-w-7xl mx-auto">
-    <div class="mb-16 flex flex-col md:flex-row justify-between items-end gap-6">
-      <div>
-        <h2 class="text-3xl md:text-5xl font-heading font-bold mb-4">OUR <span class="text-[#e10600]">SERVICES</span></h2>
-        <div class="w-16 h-1 bg-[#e10600]"></div>
-      </div>
-      <p class="text-gray-400 max-w-md text-sm">Comprehensive branding solutions tailored for businesses that refuse to compromise on quality.</p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      @for (service of services; track service.title; let i = $index) {
-        <a [routerLink]="service.link"
-           class="service-card group relative overflow-hidden bg-[#111] border border-white/5 hover:border-[#e10600]/40 transition-all duration-500"
-           [class.anim-from-left]="i % 2 === 0"
-           [class.anim-from-right]="i % 2 !== 0"
-           [class.is-visible]="showServices()"
-           [style.transition-delay]="(i * 100) + 'ms'">
-          <div class="relative h-48 overflow-hidden">
-            <img [src]="service.image" [alt]="service.title" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-            <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] to-transparent"></div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-lg font-heading font-bold mb-2 group-hover:text-[#e10600] transition-colors">{{ service.title }}</h3>
-            <p class="text-gray-400 text-xs leading-relaxed mb-4">{{ service.desc }}</p>
-            <span class="inline-flex items-center text-[#e10600] text-xs font-bold tracking-wider uppercase group-hover:gap-3 gap-2 transition-all">
-              Explore <span>→</span>
-            </span>
-          </div>
-        </a>
-      }
-    </div>
-
-    <div class="text-center mt-12">
-      <a routerLink="/services" class="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-white bg-[#e10600] px-8 py-4 hover:bg-[#c00500] transition-colors" style="clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);">
-        VIEW ALL SERVICES <span>→</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- WHY CHOOSE US SECTION -->
-<section id="why-section" class="py-24 px-8 md:px-16 bg-white text-[#0a0a0a]">
-  <div class="max-w-7xl mx-auto">
-    <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-5xl font-heading font-bold mb-4">WHY <span class="text-[#e10600]">CHOOSE US</span></h2>
-      <div class="w-16 h-1 bg-[#e10600] mx-auto mb-6"></div>
-      <p class="text-gray-500 text-sm max-w-xl mx-auto">We deliver complete branding solutions with unmatched quality, creativity, and reliability.</p>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      @for (item of whyChooseUs; track item.title; let i = $index) {
-        <div class="p-8 border border-gray-200 hover:border-[#e10600] transition-all duration-300 hover:-translate-y-2 group text-center"
-             [class.anim-from-left]="i % 2 === 0"
-             [class.anim-from-right]="i % 2 !== 0"
-             [class.is-visible]="showWhy()"
-             [style.transition-delay]="(i * 80) + 'ms'">
-          <span class="text-4xl block mb-4">{{ item.icon }}</span>
-          <h3 class="font-heading font-bold text-lg mb-2 group-hover:text-[#e10600] transition-colors">{{ item.title }}</h3>
-          <p class="text-gray-500 text-sm">{{ item.desc }}</p>
-        </div>
-      }
-    </div>
-  </div>
-</section>
-
-<!-- PORTFOLIO SECTION -->
-<section id="portfolio-section" class="py-24 px-8 md:px-16 bg-[#f5f5f3] text-[#0a0a0a]">
-  <div class="max-w-7xl mx-auto">
-    <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-5xl font-heading font-bold mb-4">OUR <span class="text-[#e10600]">PORTFOLIO</span></h2>
-      <div class="w-16 h-1 bg-[#e10600] mx-auto mb-6"></div>
-      <p class="text-gray-500 text-sm max-w-xl mx-auto">A visual showcase of our best branding work across all service categories.</p>
-    </div>
-    <div class="portfolio-grid"
-         [class.anim-from-left]="true"
-         [class.is-visible]="showPortfolio()">
-      @for (service of services; track service.title) {
-        <a [routerLink]="service.link" class="portfolio-item group relative overflow-hidden cursor-pointer">
-          <img [src]="service.image" [alt]="service.title" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors duration-300 flex items-end p-6">
-            <div class="transform group-hover:-translate-y-2 transition-transform duration-300">
-              <h4 class="text-white font-heading font-bold text-lg">{{ service.title }}</h4>
-              <span class="text-[#e10600] text-xs font-bold tracking-wider uppercase">View Work →</span>
-            </div>
-          </div>
-        </a>
-      }
-    </div>
-    <div class="text-center mt-12">
-      <a routerLink="/portfolio" class="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-white bg-[#0a0a0a] px-8 py-4 hover:bg-[#e10600] transition-colors" style="clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);">
-        VIEW FULL PORTFOLIO <span>→</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- PARTNERS & CLIENTS SECTION -->
-<section class="partners-section py-16 px-8 bg-[#0a0a0a] border-y border-white/5">
-  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 justify-between">
-    <h3 class="text-xs font-bold tracking-[0.3em] text-gray-500 uppercase shrink-0">Trusted By</h3>
-    <div class="flex-grow flex flex-wrap justify-center md:justify-end gap-6 md:gap-10">
-      <!-- Placeholder client logos -->
-      <div class="px-6 py-4 border border-white/20 text-gray-500 font-bold text-sm tracking-widest hover:border-white hover:text-white transition-colors cursor-pointer">AAR</div>
-      <div class="px-6 py-4 border border-white/20 text-gray-500 font-bold text-sm tracking-widest hover:border-white hover:text-white transition-colors cursor-pointer">AMREF</div>
-      <div class="px-6 py-4 border border-white/20 text-gray-500 font-bold text-sm tracking-widest hover:border-white hover:text-white transition-colors cursor-pointer">COCA-COLA</div>
-      <div class="px-6 py-4 border border-white/20 text-gray-500 font-bold text-sm tracking-widest hover:border-white hover:text-white transition-colors cursor-pointer">VILLAGES OF AFRICA</div>
-      <div class="px-6 py-4 border border-white/20 text-gray-500 font-bold text-sm tracking-widest hover:border-white hover:text-white transition-colors cursor-pointer">NAIROBI WATER</div>
-    </div>
-  </div>
-</section>
+<!-- CLIENTS SECTION (embedded from ClientsComponent) -->
+<app-clients [isHomeSection]="true"></app-clients>
 
 <!-- TESTIMONIALS SECTION -->
 <section class="py-24 px-8 md:px-16 bg-[#111] text-white">
@@ -260,61 +113,12 @@
     <h2 class="text-3xl md:text-5xl font-heading font-extrabold mb-4">WE DESIGN. WE BRAND. YOU GROW.</h2>
     <p class="text-white/80 text-sm mb-10 max-w-lg mx-auto">Ready to take your brand to the next level? Let's create something extraordinary together.</p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a routerLink="/contact" class="inline-flex items-center justify-center gap-2 text-sm font-bold tracking-widest px-10 py-4 bg-white text-[#e10600] hover:bg-[#0a0a0a] hover:text-white transition-colors" style="clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);">
+      <a routerLink="/contact" class="inline-flex items-center justify-center gap-2 text-sm font-bold tracking-widest px-10 py-4 bg-white text-[#e10600] border-2 border-white rounded-sm hover:bg-[#0a0a0a] hover:text-white hover:border-[#0a0a0a] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_15px_35px_rgba(0,0,0,0.4)]">
         REQUEST QUOTE
       </a>
-      <a href="https://wa.me/254726612470?text=Hello%20Bravion%20Printers!%20I%27d%20like%20to%20inquire%20about%20your%20services." target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 text-sm font-bold tracking-widest px-10 py-4 border-2 border-white text-white hover:bg-white hover:text-[#e10600] transition-colors" style="clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);">
+      <a href="https://wa.me/254726612470?text=Hello%20Bravion%20Printers!%20I%27d%20like%20to%20inquire%20about%20your%20services." target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 text-sm font-bold tracking-widest px-10 py-4 border-2 border-white text-white rounded-sm hover:bg-white hover:text-[#e10600] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_15px_35px_rgba(255,255,255,0.2)]">
         WHATSAPP US
       </a>
     </div>
-  </div>
-</section>
-
-<!-- CONTACT SECTION -->
-<section id="contact-section" class="contact-section py-24 px-8 md:px-16 bg-[#0a0a0a] text-white">
-  <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl md:text-5xl font-heading font-bold mb-4">START A <span class="text-[#e10600]">PROJECT</span></h2>
-    <p class="text-gray-400 mb-12 text-sm">Let's discuss how we can elevate your brand through premium design and print.</p>
-    
-    <form class="flex flex-col gap-6 text-left max-w-2xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="flex flex-col">
-          <label class="text-xs font-bold tracking-widest text-gray-500 mb-2">YOUR NAME</label>
-          <input type="text" class="bg-transparent border-b border-white/20 pb-2 text-white focus:outline-none focus:border-[#e10600] transition-colors" placeholder="John Doe">
-        </div>
-        <div class="flex flex-col">
-          <label class="text-xs font-bold tracking-widest text-gray-500 mb-2">PHONE NUMBER</label>
-          <input type="tel" class="bg-transparent border-b border-white/20 pb-2 text-white focus:outline-none focus:border-[#e10600] transition-colors" placeholder="0726 612 470">
-        </div>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="flex flex-col">
-          <label class="text-xs font-bold tracking-widest text-gray-500 mb-2">EMAIL ADDRESS</label>
-          <input type="email" class="bg-transparent border-b border-white/20 pb-2 text-white focus:outline-none focus:border-[#e10600] transition-colors" placeholder="john@example.com">
-        </div>
-        <div class="flex flex-col">
-          <label class="text-xs font-bold tracking-widest text-gray-500 mb-2">SERVICE INTEREST</label>
-          <select class="bg-transparent border-b border-white/20 pb-2 text-white focus:outline-none focus:border-[#e10600] transition-colors">
-            <option value="" style="color:#333">Select a service</option>
-            <option value="vehicle" style="color:#333">Vehicle Branding</option>
-            <option value="signage" style="color:#333">Signage & Shop Branding</option>
-            <option value="corporate" style="color:#333">Corporate Apparel & Gifts</option>
-            <option value="office" style="color:#333">Office & Glass Branding</option>
-            <option value="events" style="color:#333">Events & Promotional</option>
-            <option value="digital" style="color:#333">Digital Design</option>
-            <option value="printing" style="color:#333">Printing & Stationery</option>
-          </select>
-        </div>
-      </div>
-      <div class="flex flex-col mt-4">
-        <label class="text-xs font-bold tracking-widest text-gray-500 mb-2">MESSAGE</label>
-        <textarea rows="4" class="bg-transparent border-b border-white/20 pb-2 text-white focus:outline-none focus:border-[#e10600] transition-colors resize-none" placeholder="Tell us about your project..."></textarea>
-      </div>
-      <div class="mt-8 text-center">
-        <button type="submit" class="submit-btn text-sm font-bold tracking-[0.2em] px-10 py-4 bg-[#e10600] text-white hover:bg-[#c00500] transition-colors" style="clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);">
-          SEND MESSAGE
-        </button>
-      </div>
-    </form>
   </div>
 </section>
