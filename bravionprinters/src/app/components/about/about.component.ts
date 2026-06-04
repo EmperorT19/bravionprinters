@@ -1,4 +1,4 @@
-import { Component, Input, signal, OnInit } from '@angular/core';
+import { Component, Input, signal, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { COMPANY_INFO } from '../../data/company-info';
 
@@ -6,6 +6,25 @@ import { COMPANY_INFO } from '../../data/company-info';
   selector: 'app-about',
   standalone: true,
   imports: [CommonModule],
+  styles: [`
+    .why-card:hover {
+      background-color: #e10600 !important;
+      border-color: #e10600 !important;
+      box-shadow: 0 20px 50px rgba(225, 6, 0, 0.35);
+    }
+    .why-card:hover .why-card-icon {
+      background-color: rgba(255, 255, 255, 0.2) !important;
+    }
+    .why-card:hover .why-card-icon span {
+      filter: brightness(0) invert(1);
+    }
+    .why-card:hover .why-card-title {
+      color: #fff !important;
+    }
+    .why-card:hover .why-card-desc {
+      color: rgba(255, 255, 255, 0.9) !important;
+    }
+  `],
   template: `
     <div [ngClass]="isHomeSection ? 'py-24 px-8 md:px-16 bg-white text-[#0a0a0a]' : 'pt-24 pb-16 px-8 md:px-16 bg-[#0a0a0a] text-white min-h-screen'">
       <div class="max-w-7xl mx-auto">
@@ -25,17 +44,17 @@ import { COMPANY_INFO } from '../../data/company-info';
               </p>
             }
           </div>
-          <div class="grid grid-cols-2 gap-4">
+          <div id="stats-section" class="grid grid-cols-2 gap-4">
             <div [ngClass]="isHomeSection ? 'bg-[#f5f5f3] border-gray-200 shadow-sm' : 'bg-[#111] border-white/5'" class="p-8 text-center border rounded-lg hover:border-[#e10600]/50 hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(225,6,0,0.15)] transition-all duration-400 group cursor-pointer">
-              <span class="text-4xl font-heading font-bold text-[#e10600] block mb-2 group-hover:scale-110 transition-transform duration-300">500+</span>
+              <span class="text-4xl font-heading font-bold text-[#e10600] block mb-2 group-hover:scale-110 transition-transform duration-300">{{ displayProjects() }}<span class="text-3xl">+</span></span>
               <span class="text-xs font-bold tracking-widest uppercase group-hover:text-gray-300 transition-colors" [ngClass]="isHomeSection ? 'text-gray-500' : 'text-gray-500'">Projects</span>
             </div>
             <div [ngClass]="isHomeSection ? 'bg-[#f5f5f3] border-gray-200 shadow-sm' : 'bg-[#111] border-white/5'" class="p-8 text-center border rounded-lg hover:border-[#e10600]/50 hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(225,6,0,0.15)] transition-all duration-400 group cursor-pointer">
-              <span class="text-4xl font-heading font-bold text-[#e10600] block mb-2 group-hover:scale-110 transition-transform duration-300">200+</span>
+              <span class="text-4xl font-heading font-bold text-[#e10600] block mb-2 group-hover:scale-110 transition-transform duration-300">{{ displayClients() }}<span class="text-3xl">+</span></span>
               <span class="text-xs font-bold tracking-widest uppercase group-hover:text-gray-300 transition-colors" [ngClass]="isHomeSection ? 'text-gray-500' : 'text-gray-500'">Clients</span>
             </div>
             <div [ngClass]="isHomeSection ? 'bg-[#f5f5f3] border-gray-200 shadow-sm' : 'bg-[#111] border-white/5'" class="p-8 text-center border rounded-lg hover:border-[#e10600]/50 hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(225,6,0,0.15)] transition-all duration-400 group cursor-pointer">
-              <span class="text-4xl font-heading font-bold text-[#e10600] block mb-2 group-hover:scale-110 transition-transform duration-300">100%</span>
+              <span class="text-4xl font-heading font-bold text-[#e10600] block mb-2 group-hover:scale-110 transition-transform duration-300">{{ displayQuality() }}<span class="text-3xl">%</span></span>
               <span class="text-xs font-bold tracking-widest uppercase group-hover:text-gray-300 transition-colors" [ngClass]="isHomeSection ? 'text-gray-500' : 'text-gray-500'">Quality</span>
             </div>
             <div [ngClass]="isHomeSection ? 'bg-[#f5f5f3] border-gray-200 shadow-sm' : 'bg-[#111] border-white/5'" class="p-8 text-center border rounded-lg hover:border-[#e10600]/50 hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(225,6,0,0.15)] transition-all duration-400 group cursor-pointer">
@@ -73,16 +92,16 @@ import { COMPANY_INFO } from '../../data/company-info';
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             @for (item of whyChooseUs; track item.title; let i = $index) {
-              <div [ngClass]="isHomeSection ? 'bg-white border-gray-100 shadow-sm' : 'bg-[#111] border-white/5'" class="p-8 border rounded-xl hover:shadow-2xl hover:border-[#e10600] transition-all duration-500 hover:-translate-y-3 group text-center cursor-pointer"
+              <div [ngClass]="isHomeSection ? 'bg-white border-gray-100 shadow-sm' : 'bg-[#111] border-white/5'" class="why-card p-8 border rounded-xl transition-all duration-500 hover:-translate-y-3 group text-center cursor-pointer"
                    [class.anim-from-left]="i % 2 === 0"
                    [class.anim-from-right]="i % 2 !== 0"
                    [class.is-visible]="showWhy()"
                    [style.transition-delay]="(i * 80) + 'ms'">
-                <div [ngClass]="isHomeSection ? 'bg-[#f9f9f9]' : 'bg-[#1a1a1a]'" class="w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-6 group-hover:bg-[#e10600] transition-colors duration-500 shadow-inner">
-                  <span class="text-3xl group-hover:text-white transition-colors duration-500">{{ item.icon }}</span>
+                <div [ngClass]="isHomeSection ? 'bg-[#f9f9f9]' : 'bg-[#1a1a1a]'" class="why-card-icon w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-6 transition-colors duration-500 shadow-inner">
+                  <span class="text-3xl transition-colors duration-500">{{ item.icon }}</span>
                 </div>
-                <h3 [ngClass]="isHomeSection ? 'text-[#0a0a0a]' : 'text-white'" class="font-heading font-bold text-lg mb-3 group-hover:text-[#e10600] transition-colors duration-300">{{ item.title }}</h3>
-                <p [ngClass]="isHomeSection ? 'text-gray-500' : 'text-gray-400'" class="text-sm leading-relaxed">{{ item.desc }}</p>
+                <h3 [ngClass]="isHomeSection ? 'text-[#0a0a0a]' : 'text-white'" class="why-card-title font-heading font-bold text-lg mb-3 transition-colors duration-300">{{ item.title }}</h3>
+                <p [ngClass]="isHomeSection ? 'text-gray-500' : 'text-gray-400'" class="why-card-desc text-sm leading-relaxed transition-colors duration-300">{{ item.desc }}</p>
               </div>
             }
           </div>
@@ -92,11 +111,19 @@ import { COMPANY_INFO } from '../../data/company-info';
     </div>
   `
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent implements OnInit, OnDestroy {
   @Input() isHomeSection: boolean = false;
   readonly companyInfo = COMPANY_INFO;
 
   readonly showWhy = signal(false);
+
+  // Count-up signals
+  readonly displayProjects = signal(0);
+  readonly displayClients = signal(0);
+  readonly displayQuality = signal(0);
+
+  private statsAnimated = false;
+  private statsObserver: IntersectionObserver | null = null;
 
   readonly whyChooseUs = [
     { icon: '⚡', title: 'Quick Turnaround', desc: 'Fast delivery without compromising on quality.' },
@@ -110,7 +137,55 @@ export class AboutComponent implements OnInit {
   ngOnInit() {
     setTimeout(() => {
       this.observeSection('why-section', this.showWhy);
+      this.observeStats();
     }, 150);
+  }
+
+  ngOnDestroy() {
+    this.statsObserver?.disconnect();
+  }
+
+  private observeStats() {
+    if (typeof document === 'undefined') return;
+    const el = document.getElementById('stats-section');
+    if (!el) return;
+
+    const runCountUp = () => {
+      if (this.statsAnimated) return;
+      this.statsAnimated = true;
+      this.countUp(this.displayProjects, 0, 500, 2000);
+      this.countUp(this.displayClients,  0, 200, 2000);
+      this.countUp(this.displayQuality,  0, 100, 1800);
+    };
+
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom >= 0) {
+      runCountUp();
+    } else {
+      this.statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            runCountUp();
+            this.statsObserver?.disconnect();
+          }
+        });
+      }, { threshold: 0.2 });
+      this.statsObserver.observe(el);
+    }
+  }
+
+  /** Animate a signal from `from` to `to` over `duration` ms using easeOutQuart. */
+  private countUp(sig: ReturnType<typeof signal<number>>, from: number, to: number, duration: number) {
+    const startTime = performance.now();
+    const tick = (now: number) => {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      // easeOutQuart
+      const eased = 1 - Math.pow(1 - progress, 4);
+      sig.set(Math.round(from + (to - from) * eased));
+      if (progress < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
   }
 
   private observeSection(id: string, signal: any) {

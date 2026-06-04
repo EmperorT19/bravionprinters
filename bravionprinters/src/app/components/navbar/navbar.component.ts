@@ -28,7 +28,7 @@ import { RouterModule } from '@angular/router';
             </ul>
           </li>
           <li><a routerLink="/clients" routerLinkActive="active">Clients</a></li>
-          <li><a routerLink="/blog" routerLinkActive="active">Blog</a></li>
+          <!-- <li><a routerLink="/blog" routerLinkActive="active">Blog</a></li> -->
           <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
         </ul>
 
@@ -54,7 +54,7 @@ import { RouterModule } from '@angular/router';
         <a routerLink="/brand" (click)="mobileOpen.set(false)" class="sub-link">↳ Brand Services</a>
         <a routerLink="/stationery" (click)="mobileOpen.set(false)" class="sub-link">↳ Stationery Services</a>
         <a routerLink="/clients" (click)="mobileOpen.set(false)">Clients</a>
-        <a routerLink="/blog" (click)="mobileOpen.set(false)">Blog</a>
+        <!-- <a routerLink="/blog" (click)="mobileOpen.set(false)">Blog</a> -->
         <a routerLink="/contact" (click)="mobileOpen.set(false)">Contact</a>
         <a routerLink="/contact" (click)="mobileOpen.set(false)" class="mobile-cta">Get a Quote →</a>
       </div>

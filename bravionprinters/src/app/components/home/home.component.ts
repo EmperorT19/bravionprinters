@@ -21,29 +21,34 @@ interface Slide {
 export class HomeComponent implements OnInit, OnDestroy {
   readonly slides: Slide[] = [
     {
-      url: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&q=85&fit=crop',
+      url: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780564901/pexels-hellojoshwithers-16214621_xz59wl.jpg',
       alt: 'Vehicle branding showcase',
       caption: 'Vehicle Branding'
     },
     {
-      url: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=1400&q=85&fit=crop',
+      url: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780564898/pexels-shox-28271096_x9h6hx.jpg',
       alt: 'Signage and shop branding',
       caption: 'Signage & Shop Branding'
     },
     {
-      url: 'https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=1400&q=85&fit=crop',
+      url: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780566318/pexels-rdne-7648227_muf44l.jpg',
       alt: 'Corporate branding materials',
       caption: 'Corporate Branding'
     },
     {
-      url: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1400&q=85&fit=crop',
+      url: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780564901/pexels-jaralol-17527817_hjh6dw.jpg',
       alt: 'Event branding setup',
       caption: 'Event Branding'
     },
     {
-      url: 'https://images.unsplash.com/photo-1588666309990-d68f08e3d4a6?w=1400&q=85&fit=crop',
+      url: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780565748/pexels-wavyvisuals-377312923-20042067_al0ake.jpg',
       alt: 'Printing services',
-      caption: 'Printing & Stationery'
+      caption: 'Printing'
+    },
+    {
+      url: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780564900/pexels-mart-production-7718794_xnydq5.jpg',
+      alt: 'Stationery services',
+      caption: 'Stationery'
     }
   ];
 

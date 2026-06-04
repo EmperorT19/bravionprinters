@@ -56,32 +56,32 @@ export class StationeryComponent {
     {
       title: 'Custom Receipt & Invoice Books',
       desc: 'Carbonless (NCR) duplicate, triplicate, or quadruplicate receipt books, invoice logs, delivery notes, and cash sale books branded with your logo.',
-      image: 'https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?w=800&q=80&fit=crop'
+      image: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780564902/pexels-gowtham-agm-609630353-19224085_rjilfl.jpg'
     },
     {
       title: 'Company Stamps & Seals',
       desc: 'High-durability self-inking rubber stamps, pocket stamps, date stamps, and official heavy-duty embossed corporate seals.',
-      image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80&fit=crop'
+      image: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780564904/pexels-cup-of-couple-7657392_ovcxxu.jpg'
     },
     {
       title: 'Custom Envelopes & Letterheads',
       desc: 'Letterheads and envelopes custom-branded in standard sizes (DL, C5, C4). Perfectly aligned to build consistent executive correspondence.',
-      image: 'https://images.unsplash.com/photo-1513151233558-d860c5398176?w=800&q=80&fit=crop'
+      image: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780564905/pexels-andrei-ciubotariu-434389090-17262454_p8o5rj.jpg'
     },
     {
       title: 'Office Stationery Supplies',
       desc: 'General office stationery packs, custom branded presentation folders, files, writing pads, journals, and executive desk accessories.',
-      image: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&q=80&fit=crop'
+      image: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780564898/pexels-mart-production-7718835_qpwjcv.jpg'
     },
     {
       title: 'School Exercise Books & Diaries',
       desc: 'Premium school exercise books, class notebooks, diaries, report cards, and customized academic layout papers for educational institutions.',
-      image: 'https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=800&q=80&fit=crop'
+      image: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780564898/pexels-jessikaarraes-14270284_npefjd.jpg'
     },
     {
       title: 'Toners & Consumables',
       desc: 'Genuine laser printer toners, photocopy cartridges, plotting paper rolls, thermal receipts, and other high-grade printing consumables.',
-      image: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=800&q=80&fit=crop'
+      image: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780564899/pexels-jakubzerdzicki-23534017_fyh2th.jpg'
     }
   ];
 }

@@ -66,17 +66,17 @@ export class DesignComponent {
     {
       title: 'Video & Article Thumbnails',
       desc: 'Captivating, high-impact custom thumbnails designed to maximize click-through rates. Make your YouTube videos, blogs, and articles stand out from the crowd.',
-      image: 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=800&q=80&fit=crop'
+      image: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780567975/kyle-loftus-6eREmQ0VY-k-unsplash_ufxahs.jpg'
     },
     {
       title: 'Corporate Digital Layouts',
       desc: 'Professional pitch decks, corporate presentation templates, and digital documents. Align your corporate communications with your brand identity guidelines.',
-      image: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=800&q=80&fit=crop'
+      image: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780564903/pexels-eva-bronzini-7661139_wfjfl4.jpg'
     },
     {
       title: 'Product & Marketing Posters',
       desc: 'Sleek, eye-catching product showcase graphics, digital menu cards, and promotional poster layouts. Present your offerings in the most professional light.',
-      image: 'https://images.unsplash.com/photo-1509343256512-d77a53778e8a?w=800&q=80&fit=crop'
+      image: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780567977/erik-mclean-J0ZD8r_ClGg-unsplash_gauxjy.jpg'
     },
     {
       title: 'Animated & Motion Designs',

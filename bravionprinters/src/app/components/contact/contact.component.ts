@@ -33,7 +33,7 @@ import { CommonModule } from '@angular/common';
                 </div>
                 <div>
                   <span class="block text-[10px] font-bold tracking-widest text-gray-400 uppercase mb-1">Phone / WhatsApp</span>
-                  <a href="tel:+254725725186" class="text-lg font-heading font-bold text-[#0a0a0a] hover:text-[#e10600] transition-colors">0726 612 470</a>
+                  <a href="tel:+254725725186" class="text-lg font-heading font-bold text-[#0a0a0a] hover:text-[#e10600] transition-colors">0725 725 186</a>
                 </div>
               </div>
 
@@ -53,7 +53,7 @@ import { CommonModule } from '@angular/common';
                 </div>
                 <div>
                   <span class="block text-[10px] font-bold tracking-widest text-gray-400 uppercase mb-1">Office Location</span>
-                  <span class="text-base font-heading font-bold text-[#0a0a0a] block leading-snug">Kilimani, Nairobi<br/>Opp. Rose Avenue Center<br/>next to Listers Car wash</span>
+                  <span class="text-base font-heading font-bold text-[#0a0a0a] block leading-snug">Bravion House, Kilimani<br/>Opp. Rose Avenue Center, next to Listers Car wash<br/>Nairobi, Kenya</span>
                 </div>
               </div>
               <!-- ====== SOCIAL MEDIA ====== -->

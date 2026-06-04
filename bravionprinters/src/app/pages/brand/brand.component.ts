@@ -56,22 +56,22 @@ export class BrandComponent {
     {
       title: 'Vehicle Branding',
       desc: 'Turn personal cars, corporate fleets, matatus, school buses, delivery vans, and trucks into high-impact moving billboards with full or half wraps.',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80&fit=crop'
+      image: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780564903/pexels-fabianoshow4-564869275-29571418_s0uop4.jpg'
     },
     {
       title: 'Signage & Shop Branding',
       desc: 'Eye-catching 3D acrylic signs, LED & neon signs, reception displays, billboard graphics, light boxes, and complete shop front fabrication.',
-      image: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&q=80&fit=crop'
+      image: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780564901/pexels-gowtham-agm-609630353-19576867_ejybjn.jpg'
     },
     {
       title: 'Branded Apparel & Uniforms',
       desc: 'High-quality custom branded t-shirts, polo shirts, hoodies, caps, safety reflectors, and corporate or institutional uniforms.',
-      image: 'https://images.unsplash.com/photo-1578932750294-f5075e85f44a?w=800&q=80&fit=crop'
+      image: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780564905/pexels-alexeydemidov-9314012_diaieu.jpg'
     },
     {
       title: 'Corporate Gifts & Merchandise',
       desc: 'Branded executive diaries, calendars, mugs, pens, water bottles, and gift hampers designed to establish lasting brand affinity.',
-      image: 'https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&q=80&fit=crop'
+      image: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780564900/pexels-hamza01nsr-7000698_iogqfn.jpg'
     },
     {
       title: 'Office & Glass Branding',
@@ -81,12 +81,12 @@ export class BrandComponent {
     {
       title: 'Events & Promotional Branding',
       desc: 'Comprehensive solutions for exhibitions and roadshows, featuring roll-up banners, teardrops, backdrops, custom gazebos, and branded tents.',
-      image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80&fit=crop'
+      image: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780565748/pexels-sleeba-thomas-156395977-30283892_uczkbc.jpg'
     },
     {
       title: 'Institutional & Resort Branding',
       desc: 'Tailored branding designs for hotels, lodges, churches, and academic institutions, ensuring robust visibility and alignment.',
-      image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80&fit=crop'
+      image: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780564906/pexels-akari-rei-2150142406-33927819_a2to7z.jpg'
     }
   ];
 }
