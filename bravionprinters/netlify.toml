@@ -1,6 +1,9 @@
 [build]
-command = "npm run build -- --configuration production"
+command = "npm install --include=dev && npm run build -- --configuration production"
 publish = "dist/bravionprinters/browser"
+
+[build.environment]
+  NODE_VERSION = "20"
 
 [context.production.environment]
   NODE_VERSION = "20"
