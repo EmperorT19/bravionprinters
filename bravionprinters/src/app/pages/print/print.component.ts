@@ -56,32 +56,32 @@ export class PrintComponent {
     {
       title: 'Company Profiles & Catalogues',
       desc: 'Sleek, corporate-standard profile books, directories, product catalogs, and pamphlets. Establish solid business credentials with outstanding print quality.',
-      image: 'https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=800&q=80&fit=crop'
+      image: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780564906/pexels-alleksana-4271624_agpyln.jpg'
     },
     {
       title: 'Annual & Strategic Reports',
       desc: 'Professional document print production for corporate annual reports, strategic plans, audit results, and tender proposal packages with durable binding.',
-      image: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?w=800&q=80&fit=crop'
+      image: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780564899/pexels-mart-production-7605981_czeiyj.jpg'
     },
     {
       title: 'Brochures, Flyers & Leaflets',
       desc: 'Vibrant, sharp commercial brochures and single-sheet marketing flyers. Available in single, bi-fold, or tri-fold styles with premium texturized coatings.',
-      image: 'https://images.unsplash.com/photo-1572044160411-b39c74ade31c?w=800&q=80&fit=crop'
+      image: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780564906/pexels-casnafu-36823601_yjheqq.jpg'
     },
     {
       title: 'Premium Business Cards',
       desc: 'Custom-designed executive business cards printed on thick cardstocks with options for soft-touch matte lamination, spot UV, or luxury gold foil stamping.',
-      image: 'https://images.unsplash.com/photo-1596701062351-8c2c14d1fcd1?w=800&q=80&fit=crop'
+      image: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780564907/pexels-ai25studioai-6620968_vo3jks.jpg'
     },
     {
       title: 'Offset & Bulk Printing',
       desc: 'Cost-efficient bulk commercial printing using state-of-the-art offset lithography machines. Perfect for high-volume flyers, newsletters, and manuals.',
-      image: 'https://images.unsplash.com/photo-1616628188467-8fb29f49bbe8?w=800&q=80&fit=crop'
+      image: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780564904/pexels-criiv-9550363_yiiu3j.jpg'
     },
     {
       title: 'Books & Publication Printing',
       desc: 'Complete printing services for academic books, magazines, manuals, novels, and catalogs. Includes typesetting assistance, softcover/hardcover binding, and laminating.',
-      image: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&q=80&fit=crop'
+      image: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780566147/pexels-wutthichai-charoenburi-553075115-19843566_mbpfto.jpg'
     }
   ];
 }

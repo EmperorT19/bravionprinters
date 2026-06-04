@@ -56,7 +56,7 @@ import { RouterModule } from '@angular/router';
               <li><a routerLink="/">Home</a></li>
               <li><a routerLink="/about">About Us</a></li>
               <li><a routerLink="/services">Services</a></li>
-              <li><a routerLink="/blog">Blog</a></li>
+              <!-- <li><a routerLink="/blog">Blog</a></li> -->
               <li><a routerLink="/contact">Contact</a></li>
             </ul>
           </div>
@@ -85,8 +85,10 @@ import { RouterModule } from '@angular/router';
                 <a href="mailto:info&#64;bravionprinters.co.ke">info&#64;bravionprinters.co.ke</a>
               </div>
               <div class="contact-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                <span>Kilimani, Nairobi<br/>Opp. Rose Avenue Center,<br/>next to Listers Car wash</span>
+                <span style="font-size:16px">📮</span> <a href="mailto:sales&#64;bravionprinters.co.ke">P.O Box 57249-00200<br/>Nairobi</a>
+              </div>
+              <div class="contact-item">
+                <a href="mailto:info@bravionprinters.co.ke" class="svc-cta-btn inline-flex items-center gap-2 text-xs font-bold tracking-widest text-white bg-[#e10600] border-2 border-[#e10600] px-8 py-4 rounded-sm hover:bg-white hover:text-[#e10600] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_30px_rgba(225,6,0,0.4)]">CONTACT FOR PARTNERSHIP →</a>
               </div>
             </div>
           </div>

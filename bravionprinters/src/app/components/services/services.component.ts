@@ -7,6 +7,16 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [CommonModule, RouterModule],
   styleUrls: ['./services.component.css'],
+  styles: [`
+    .svc-cta-btn:hover {
+      background-color: #e10600 !important;
+      color: #fff !important;
+    }
+    .svc-cta-btn.bg-red:hover {
+      background-color: #fff !important;
+      color: #e10600 !important;
+    }
+  `],
   template: `
     <div [ngClass]="isHomeSection ? '' : 'pt-24 min-h-screen bg-[#0a0a0a]'">
       <!-- Standalone Page Header -->
@@ -128,28 +138,28 @@ export class ServicesComponent implements OnInit {
       title: 'Design Services',
       desc: 'Creative digital design, social media posters, ad creatives, animated designs, and corporate brand layout graphics.',
       link: '/design',
-      image: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80&fit=crop'
+      image: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780564899/pexels-karola-g2-6444_q8rirw.jpg'
     },
     {
       icon: 'M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2M6 14h12v8H6v-8z',
       title: 'Print Services',
       desc: 'Premium commercial printing, company profiles, annual reports, brochures, flyers, and offset bulk prints.',
       link: '/print',
-      image: 'https://images.unsplash.com/photo-1616628188467-8fb29f49bbe8?w=600&q=80&fit=crop'
+      image: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780566986/pexels-mathilde-10897656_qody2g.jpg'
     },
     {
       icon: 'M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2',
       title: 'Brand Services',
       desc: 'High-impact vehicle wraps, custom corporate apparel, gifts, shop signage, event banners, and office branding.',
       link: '/brand',
-      image: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=600&q=80&fit=crop'
+      image: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780564904/pexels-eva-bronzini-7661410_zniw1s.jpg'
     },
     {
       icon: 'M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z M14 2v6h6 M16 13H8 M16 17H8 M10 9H8',
       title: 'Stationery Services',
       desc: 'Branded carbonless receipt and invoice books, customized envelopes, company stamps, and office stationery supplies.',
       link: '/stationery',
-      image: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&q=80&fit=crop'
+      image: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780564904/pexels-cup-of-couple-7657391_rpvrk8.jpg'
     }
   ];
 
