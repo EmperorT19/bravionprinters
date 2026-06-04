@@ -1,0 +1,468 @@
+/* Include everything from the original app.css */
+.landing-root {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  background: #0a0a0a;
+  font-family: 'Inter', sans-serif;
+}
+
+.brand-badge {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  mix-blend-mode: difference;
+}
+
+.brand-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.25em;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.brand-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #e10600;
+  flex-shrink: 0;
+}
+
+.brand-tag {
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  opacity: 0.6;
+  text-transform: uppercase;
+}
+
+.left-panel {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.stripe {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: flex 0.55s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.stripe-hovered { flex: 2.5; }
+.stripe-shrunk { flex: 0.4; }
+
+.stripe-black { background-color: #050505; }
+.stripe-white { background-color: #f5f5f3; }
+.stripe-red   { background-color: #e10600; }
+
+.stripe-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+  padding: 1.5rem 1rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease 0.1s, transform 0.3s ease 0.1s;
+  pointer-events: none;
+  min-width: 160px;
+}
+
+.stripe-hovered .stripe-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stripe-label {
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  color: rgba(255,255,255,0.55);
+  text-transform: uppercase;
+}
+
+.stripe-number {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.stripe-desc {
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.5;
+  max-width: 180px;
+  margin: 0.25rem 0 0;
+}
+
+.stripe-line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scaleY(1);
+  width: 1px;
+  height: 60px;
+  background: rgba(255,255,255,0.25);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.stripe-hovered .stripe-line {
+  transform: translate(-50%, -50%) scaleY(0);
+  opacity: 0;
+}
+
+.right-panel {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background: #111;
+}
+
+.slide-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: opacity 0.4s ease, transform 0.6s ease;
+}
+
+.slide-fade-out {
+  opacity: 0;
+  transform: scale(1.03);
+}
+
+.slide-fade-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.slide-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(0,0,0,0.6) 100%
+  );
+  pointer-events: none;
+}
+
+.slide-caption {
+  position: absolute;
+  bottom: 5.5rem;
+  left: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.caption-hidden {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+.caption-line {
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: #e10600;
+  flex-shrink: 0;
+}
+
+.caption-text {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  color: rgba(255,255,255,0.85);
+  text-transform: uppercase;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 50%;
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.arrow:hover {
+  background: #e10600;
+  border-color: #e10600;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.arrow svg {
+  width: 18px;
+  height: 18px;
+}
+
+.arrow-left  { left: 1.25rem; }
+.arrow-right { right: 1.25rem; }
+
+.dots-nav {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  border: none;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease, width 0.3s ease;
+  padding: 0;
+}
+
+.dot-active {
+  background: #e10600;
+  width: 22px;
+  border-radius: 1px;
+}
+
+.slide-counter {
+  position: absolute;
+  bottom: 2rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  z-index: 10;
+}
+
+.counter-current {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.counter-divider {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.3);
+  margin: 0 2px;
+}
+
+.counter-total {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: rgba(255,255,255,0.4);
+}
+
+.cta-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  background: rgba(5,5,5,0.85);
+  backdrop-filter: blur(12px);
+  z-index: 50;
+}
+
+.cta-text {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  font-weight: 400;
+}
+
+.cta-btn {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #fff;
+  background: #e10600;
+  border: none;
+  padding: 0.55rem 1.25rem;
+  cursor: pointer;
+  clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.cta-btn:hover {
+  background: #c00500;
+  transform: scale(1.04);
+}
+
+.cta-arrow {
+  margin-left: 0.4rem;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.cta-btn:hover .cta-arrow {
+  transform: translateX(3px);
+}
+
+/* ====== TRANSITION ANIMATIONS ====== */
+/* Use translateY for Why Choose Us cards so hover translateY doesn't conflict */
+.anim-from-left {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.anim-from-right {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Force hover effect to win over the .is-visible resting transform */
+.is-visible:hover {
+  opacity: 1;
+  transform: translateY(-12px) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ====== TESTIMONIALS ====== */
+.testimonial-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+.testimonial-active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  position: relative;
+}
+
+/* ====== PREMIUM SERVICES SECTION ====== */
+.services-section-premium {
+  background-color: #050505;
+}
+
+/* Subtle Dot Grid Background */
+.svc-bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Radial Glows for Depth */
+.svc-glow {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(225, 6, 0, 0.05) 0%, rgba(225, 6, 0, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.svc-glow-left {
+  top: -150px;
+  left: -250px;
+}
+.svc-glow-right {
+  bottom: -150px;
+  right: -250px;
+}
+
+/* Staggered Fade Up Animations */
+.svc-anim {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.svc-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ====== SERVICE CARD HOVER EFFECTS ====== */
+/* These must live in the component CSS to override the .svc-anim transform property */
+.svc-card {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  border-radius: 0.75rem;
+  transition:
+    transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.45s ease,
+    opacity 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Override the resting svc-visible state on hover */
+.svc-card.svc-visible:hover {
+  transform: translateY(-10px) !important;
+  box-shadow: 0 20px 50px rgba(225, 6, 0, 0.2);
+}
+
+/* ====== NAVBAR & GENERAL BUTTON HOVER ====== */
+.nav-cta,
+.cta-btn {
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.nav-cta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(225, 6, 0, 0.4);
+}

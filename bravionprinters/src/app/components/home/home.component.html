@@ -1,0 +1,124 @@
+<!-- HERO SECTION (Existing 50/50 Split) -->
+<div class="landing-root">
+  <!-- ═══════════════════════════════════════
+       FLOATING BRAND BADGE
+  ════════════════════════════════════════ -->
+  <header class="brand-badge">
+    <span class="brand-name">BRAVION</span>
+    <span class="brand-dot"></span>
+    <span class="brand-tag">DESIGN . PRINT . BRAND . STATIONERY   </span>
+  </header>
+
+  <section class="left-panel">
+    <!-- BLACK STRIPE -->
+    <div class="stripe stripe-black" [class.stripe-hovered]="hoveredStripe() === 0" [class.stripe-shrunk]="hoveredStripe() !== null && hoveredStripe() !== 0" (mouseenter)="hoveredStripe.set(0)" (mouseleave)="hoveredStripe.set(null)">
+      <div class="stripe-content">
+        <span class="stripe-label">ESTABLISHED</span>
+        <span class="stripe-number">2022</span>
+        <p class="stripe-desc">Crafting bold brand identities since July 2022</p>
+      </div>
+      <div class="stripe-line"></div>
+    </div>
+    <!-- WHITE STRIPE -->
+    <div class="stripe stripe-white" [class.stripe-hovered]="hoveredStripe() === 1" [class.stripe-shrunk]="hoveredStripe() !== null && hoveredStripe() !== 1" (mouseenter)="hoveredStripe.set(1)" (mouseleave)="hoveredStripe.set(null)">
+      <div class="stripe-content">
+        <span class="stripe-label" style="color:#0a0a0a">OUR PROMISE</span>
+        <span class="stripe-number" style="color:#0a0a0a">QUALITY</span>
+        <p class="stripe-desc" style="color:#333">Quick turnaround. Quality results. Every time.</p>
+      </div>
+      <div class="stripe-line" style="background:#0a0a0a"></div>
+    </div>
+    <!-- RED STRIPE -->
+    <div class="stripe stripe-red" [class.stripe-hovered]="hoveredStripe() === 2" [class.stripe-shrunk]="hoveredStripe() !== null && hoveredStripe() !== 2" (mouseenter)="hoveredStripe.set(2)" (mouseleave)="hoveredStripe.set(null)">
+      <div class="stripe-content">
+        <span class="stripe-label">YOUR BRAND</span>
+        <span class="stripe-number">SEEN.</span>
+        <p class="stripe-desc">Make your brand seen, trusted, chosen.</p>
+      </div>
+      <div class="stripe-line"></div>
+    </div>
+  </section>
+
+  <!-- RIGHT HALF -->
+  <section class="right-panel">
+    <div class="slide-container">
+      <img [src]="currentSlide.url" [alt]="currentSlide.alt" class="slide-image" [class.slide-fade-out]="isTransitioning()" [class.slide-fade-in]="!isTransitioning()" />
+      <div class="slide-overlay"></div>
+      <div class="slide-caption" [class.caption-hidden]="isTransitioning()">
+        <span class="caption-line"></span>
+        <span class="caption-text">{{ currentSlide.caption }}</span>
+      </div>
+    </div>
+    <button class="arrow arrow-left" (click)="goToPrev(); onCarouselInteract()" aria-label="Previous slide">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+    </button>
+    <button class="arrow arrow-right" (click)="goToNext(); onCarouselInteract()" aria-label="Next slide">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </button>
+    <div class="dots-nav">
+      @for (slide of slides; track $index) {
+        <button class="dot" [class.dot-active]="currentIndex() === $index" (click)="goToSlide($index)" [attr.aria-label]="'Go to slide ' + ($index + 1)"></button>
+      }
+    </div>
+    <div class="slide-counter">
+      <span class="counter-current">{{ (currentIndex() + 1).toString().padStart(2, '0') }}</span>
+      <span class="counter-divider">/</span>
+      <span class="counter-total">{{ slides.length.toString().padStart(2, '0') }}</span>
+    </div>
+  </section>
+  <div class="cta-bar">
+    <span class="cta-text">Make Your Brand Seen, Trusted, Chosen.</span>
+    <button class="cta-btn" routerLink="/contact">GET A QUOTE <span class="cta-arrow">→</span></button>
+  </div>
+</div>
+
+<!-- ABOUT SECTION (embedded from AboutComponent) -->
+<app-about [isHomeSection]="true"></app-about>
+
+<!-- SERVICES SECTION (embedded from ServicesComponent) -->
+<app-services [isHomeSection]="true"></app-services>
+
+<!-- CLIENTS SECTION (embedded from ClientsComponent) -->
+<app-clients [isHomeSection]="true"></app-clients>
+
+<!-- TESTIMONIALS SECTION -->
+<section class="py-24 px-8 md:px-16 bg-[#111] text-white">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl md:text-5xl font-heading font-bold mb-4">WHAT OUR <span class="text-[#e10600]">CLIENTS SAY</span></h2>
+    <div class="w-16 h-1 bg-[#e10600] mx-auto mb-12"></div>
+
+    <div class="relative min-h-[200px]">
+      @for (testimonial of testimonials; track testimonial.name; let i = $index) {
+        <div class="testimonial-slide" [class.testimonial-active]="activeTestimonial() === i">
+          <svg class="mx-auto mb-6 text-[#e10600]" width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10H0z"/></svg>
+          <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-6 italic">"{{ testimonial.text }}"</p>
+          <span class="font-heading font-bold text-white">{{ testimonial.name }}</span>
+          <span class="block text-xs text-[#e10600] tracking-wider mt-1">{{ testimonial.company }}</span>
+        </div>
+      }
+    </div>
+
+    <div class="flex justify-center gap-3 mt-8">
+      @for (testimonial of testimonials; track $index) {
+        <button class="w-2.5 h-2.5 rounded-full transition-all duration-300" [class]="activeTestimonial() === $index ? 'bg-[#e10600] w-8 rounded-sm' : 'bg-white/20'" (click)="activeTestimonial.set($index)"></button>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="py-24 px-8 md:px-16 bg-[#e10600] text-white text-center relative overflow-hidden">
+  <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2260%22 height=%2260%22%3E%3Crect width=%2260%22 height=%2260%22 fill=%22none%22 stroke=%22white%22 stroke-width=%220.5%22/%3E%3C/svg%3E');"></div>
+  <div class="relative max-w-3xl mx-auto">
+    <h2 class="text-3xl md:text-5xl font-heading font-extrabold mb-4">WE DESIGN. WE BRAND. YOU GROW.</h2>
+    <p class="text-white/80 text-sm mb-10 max-w-lg mx-auto">Ready to take your brand to the next level? Let's create something extraordinary together.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a routerLink="/contact" class="inline-flex items-center justify-center gap-2 text-sm font-bold tracking-widest px-10 py-4 bg-white text-[#e10600] border-2 border-white rounded-sm hover:bg-[#0a0a0a] hover:text-white hover:border-[#0a0a0a] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_15px_35px_rgba(0,0,0,0.4)]">
+        REQUEST QUOTE
+      </a>
+      <a href="https://wa.me/254726612470?text=Hello%20Bravion%20Printers!%20I%27d%20like%20to%20inquire%20about%20your%20services." target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 text-sm font-bold tracking-widest px-10 py-4 border-2 border-white text-white rounded-sm hover:bg-white hover:text-[#e10600] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_15px_35px_rgba(255,255,255,0.2)]">
+        WHATSAPP US
+      </a>
+    </div>
+  </div>
+</section>
