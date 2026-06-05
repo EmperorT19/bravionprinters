@@ -20,15 +20,25 @@ interface Slide {
 })
 export class HomeComponent implements OnInit, OnDestroy {
   readonly slides: Slide[] = [
-    {
-      url: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780564901/pexels-hellojoshwithers-16214621_xz59wl.jpg',
-      alt: 'Vehicle branding showcase',
-      caption: 'Vehicle Branding'
+     {
+      url: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780640239/OFFICE_BRANDING_f321lm.png',
+      alt: 'Office branding',
+      caption: 'Office Branding'
     },
     {
       url: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780564898/pexels-shox-28271096_x9h6hx.jpg',
       alt: 'Signage and shop branding',
       caption: 'Signage & Shop Branding'
+    },
+    {
+      url: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780580435/images_3_osgw9j.png',
+      alt: 'Vehicle branding showcase',
+      caption: 'Vehicle Branding'
+    },
+    {
+      url: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780640234/Door_Signs_Design_-Modern_Acrylic_Door_Signs_with_ADAInterior_Wall_ekmj8r.png',
+      alt: 'Signage branding',
+      caption: 'Signage Branding'
     },
     {
       url: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780566318/pexels-rdne-7648227_muf44l.jpg',

@@ -7,7 +7,7 @@ bootstrapApplication(App, {
   providers: [
     provideRouter(
       routes,
-      withInMemoryScrolling({ scrollPositionRestoration: 'enabled' })
+      withInMemoryScrolling({ scrollPositionRestoration: 'top' })
     )
   ],
 });

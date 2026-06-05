@@ -43,14 +43,26 @@ import { CommonModule } from '@angular/common';
           <p class="text-gray-400 leading-relaxed mb-8">
             Looking for a reliable branding and printing partner for your agency, events company, or corporate institution? We offer dedicated support and bulk rates for long-term partners.
           </p>
-          <a href="mailto:info@bravionprinters.co.ke" class="inline-flex items-center gap-2 text-sm font-bold tracking-widest text-[#0a0a0a] bg-white px-8 py-4 hover:bg-[#e10600] hover:text-white transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_10px_25px_rgba(225,6,0,0.35)] rounded-full">
-            CONTACT FOR PARTNERSHIP →
+          <a href="mailto:info@braviongroup.co.ke" class="partnership-btn group inline-flex items-center gap-2 text-sm font-bold tracking-widest text-[#0a0a0a] bg-white px-8 py-4 rounded-full cursor-pointer transition-all duration-300">
+            CONTACT FOR PARTNERSHIP 
+            <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
           </a>
         </div>
 
       </div>
     </div>
-  `
+  `,
+  styles: [`
+    .partnership-btn {
+      transition: all 0.3s ease-in-out;
+    }
+    .partnership-btn:hover {
+      background-color: #e10600 !important;
+      color: #ffffff !important;
+      transform: translateY(-4px) !important;
+      box-shadow: 0 10px 25px rgba(225, 6, 0, 0.35) !important;
+    }
+  `]
 })
 export class ClientsComponent {
   @Input() isHomeSection: boolean = false;

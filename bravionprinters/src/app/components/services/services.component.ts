@@ -159,7 +159,7 @@ export class ServicesComponent implements OnInit {
       title: 'Stationery Services',
       desc: 'Branded carbonless receipt and invoice books, customized envelopes, company stamps, and office stationery supplies.',
       link: '/stationery',
-      image: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780564904/pexels-cup-of-couple-7657391_rpvrk8.jpg'
+      image: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780564900/pexels-mart-production-7718794_xnydq5.jpg'
     }
   ];
 

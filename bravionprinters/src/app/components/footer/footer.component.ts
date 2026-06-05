@@ -82,13 +82,22 @@ import { RouterModule } from '@angular/router';
               </div>
               <div class="contact-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                <a href="mailto:info&#64;bravionprinters.co.ke">info&#64;bravionprinters.co.ke</a>
+                <a href="mailto:info&#64;braviongroup.co.ke">info&#64;braviongroup.co.ke</a>
               </div>
-              <div class="contact-item">
-                <span style="font-size:16px">📮</span> <a href="mailto:sales&#64;bravionprinters.co.ke">P.O Box 57249-00200<br/>Nairobi</a>
-              </div>
-              <div class="contact-item">
-                <a href="mailto:info@bravionprinters.co.ke" class="svc-cta-btn inline-flex items-center gap-2 text-xs font-bold tracking-widest text-white bg-[#e10600] border-2 border-[#e10600] px-8 py-4 rounded-sm hover:bg-white hover:text-[#e10600] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_30px_rgba(225,6,0,0.4)]">CONTACT FOR PARTNERSHIP →</a>
+            <div class="contact-item">
+  <span style="font-size:16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+    <rect x="2" y="7" width="20" height="14" rx="2"/>
+    <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/>
+    <line x1="12" y1="12" x2="12" y2="16"/>
+    <line x1="10" y1="14" x2="14" y2="14"/>
+  </svg></span>
+  <a href="mailto:services&#64;braviongroup.co.ke">P.O Box 57249-00200<br/>Nairobi</a>
+</div>
+
+<div class="contact-item">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+  <span>Bravion House, Kilimani<br/>Opp. Rose Avenue Center, next to Listers Car wash<br/>Nairobi, Kenya</span>
+
               </div>
             </div>
           </div>
@@ -98,7 +107,7 @@ import { RouterModule } from '@angular/router';
       <!-- Footer Bottom -->
       <div class="footer-bottom">
         <span>© {{ currentYear }} Bravion Printers Ltd. All Rights Reserved.</span>
-        <span>www.bravionprinters.co.ke</span>
+        <span>www.braviongroup.co.ke</span>
       </div>
     </footer>
   `,
@@ -122,6 +131,8 @@ import { RouterModule } from '@angular/router';
       height: 36px;
       width: auto;
       margin-bottom: 1rem;
+      mix-blend-mode: screen;
+      opacity: 0.9;
     }
     .footer-desc {
       font-size: 0.82rem;

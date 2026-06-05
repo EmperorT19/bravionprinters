@@ -43,7 +43,7 @@ import { CommonModule } from '@angular/common';
                 </div>
                 <div>
                   <span class="block text-[10px] font-bold tracking-widest text-gray-400 uppercase mb-1">Email Address</span>
-                  <a href="mailto:info@bravionprinters.co.ke" class="text-lg font-heading font-bold text-[#0a0a0a] hover:text-[#e10600] transition-colors break-all">info&#64;bravionprinters.co.ke</a>
+                  <a href="mailto:info@braviongroup.co.ke" class="text-lg font-heading font-bold text-[#0a0a0a] hover:text-[#e10600] transition-colors break-all">info&#64;braviongroup.co.ke</a>
                 </div>
               </div>
 
@@ -129,7 +129,7 @@ import { CommonModule } from '@angular/common';
                 
                 <!-- ====== GENERAL INQUIRY FORM ====== -->
                 @if (activeForm() === 'general') {
-                  <form action="mailto:info@bravionprinters.co.ke" method="POST" enctype="text/plain" (submit)="onSubmit()" class="flex flex-col gap-6 animate-fade-in">
+                  <form action="mailto:info@braviongroup.co.ke" method="POST" enctype="text/plain" (submit)="onSubmit()" class="flex flex-col gap-6 animate-fade-in">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div class="flex flex-col">
                         <label class="text-[10px] font-bold tracking-widest text-gray-500 uppercase mb-2">Full Name</label>
@@ -158,7 +158,7 @@ import { CommonModule } from '@angular/common';
 
                 <!-- ====== DETAILED QUOTE FORM ====== -->
                 @if (activeForm() === 'quote') {
-                  <form action="mailto:info@bravionprinters.co.ke" method="POST" enctype="text/plain" (submit)="onSubmit()" class="flex flex-col gap-8 animate-fade-in">
+                  <form action="mailto:info@braviongroup.co.ke" method="POST" enctype="text/plain" (submit)="onSubmit()" class="flex flex-col gap-8 animate-fade-in">
                     
                     <!-- Section 1: Contact Info -->
                     <div>
