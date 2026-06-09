@@ -11,30 +11,33 @@
 
   <section class="left-panel">
     <!-- BLACK STRIPE -->
-    <div class="stripe stripe-black" [class.stripe-hovered]="hoveredStripe() === 0" [class.stripe-shrunk]="hoveredStripe() !== null && hoveredStripe() !== 0" (mouseenter)="hoveredStripe.set(0)" (mouseleave)="hoveredStripe.set(null)">
+    <div class="stripe stripe-black" [class.stripe-hovered]="hoveredStripe() === 0" [class.stripe-shrunk]="hoveredStripe() !== null && hoveredStripe() !== 0" (mouseenter)="hoveredStripe.set(0)" (mouseleave)="hoveredStripe.set(null)" (click)="hoveredStripe() === 0 ? hoveredStripe.set(null) : hoveredStripe.set(0)">
       <div class="stripe-content">
         <span class="stripe-label">ESTABLISHED</span>
         <span class="stripe-number">2022</span>
         <p class="stripe-desc">Crafting bold brand identities since July 2022</p>
       </div>
+      <div class="stripe-vertical-label">ESTABLISHED</div>
       <div class="stripe-line"></div>
     </div>
     <!-- WHITE STRIPE -->
-    <div class="stripe stripe-white" [class.stripe-hovered]="hoveredStripe() === 1" [class.stripe-shrunk]="hoveredStripe() !== null && hoveredStripe() !== 1" (mouseenter)="hoveredStripe.set(1)" (mouseleave)="hoveredStripe.set(null)">
+    <div class="stripe stripe-white" [class.stripe-hovered]="hoveredStripe() === 1" [class.stripe-shrunk]="hoveredStripe() !== null && hoveredStripe() !== 1" (mouseenter)="hoveredStripe.set(1)" (mouseleave)="hoveredStripe.set(null)" (click)="hoveredStripe() === 1 ? hoveredStripe.set(null) : hoveredStripe.set(1)">
       <div class="stripe-content">
         <span class="stripe-label" style="color:#0a0a0a">OUR PROMISE</span>
         <span class="stripe-number" style="color:#0a0a0a">QUALITY</span>
         <p class="stripe-desc" style="color:#333">Quick turnaround. Quality results. Every time.</p>
       </div>
+      <div class="stripe-vertical-label" style="color:#0a0a0a">OUR PROMISE</div>
       <div class="stripe-line" style="background:#0a0a0a"></div>
     </div>
     <!-- RED STRIPE -->
-    <div class="stripe stripe-red" [class.stripe-hovered]="hoveredStripe() === 2" [class.stripe-shrunk]="hoveredStripe() !== null && hoveredStripe() !== 2" (mouseenter)="hoveredStripe.set(2)" (mouseleave)="hoveredStripe.set(null)">
+    <div class="stripe stripe-red" [class.stripe-hovered]="hoveredStripe() === 2" [class.stripe-shrunk]="hoveredStripe() !== null && hoveredStripe() !== 2" (mouseenter)="hoveredStripe.set(2)" (mouseleave)="hoveredStripe.set(null)" (click)="hoveredStripe() === 2 ? hoveredStripe.set(null) : hoveredStripe.set(2)">
       <div class="stripe-content">
         <span class="stripe-label">YOUR BRAND</span>
         <span class="stripe-number">SEEN.</span>
         <p class="stripe-desc">Make your brand seen, trusted, chosen.</p>
       </div>
+      <div class="stripe-vertical-label">YOUR BRAND</div>
       <div class="stripe-line"></div>
     </div>
   </section>
