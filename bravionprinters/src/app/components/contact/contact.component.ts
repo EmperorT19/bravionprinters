@@ -53,7 +53,7 @@ import { CommonModule } from '@angular/common';
                 </div>
                 <div>
                   <span class="block text-[10px] font-bold tracking-widest text-gray-400 uppercase mb-1">Office Location</span>
-                  <span class="text-base font-heading font-bold text-[#0a0a0a] block leading-snug">Bravion House, Kilimani<br/>Opp. Rose Avenue Center, next to Listers Car wash<br/>Nairobi, Kenya</span>
+                  <span class="text-base font-heading font-bold text-[#0a0a0a] block leading-snug">Bravion House, Kindaruma Road,<br/>Opposite Carrefour Supermarket,<br/>Rose Avenue Mall, Next to Listers Car Wash</span>
                 </div>
               </div>
               <!-- ====== SOCIAL MEDIA ====== -->

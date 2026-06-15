@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-whatsapp-button',
   standalone: true,
   template: `
-    <a href="https://wa.me/YOUR_PHONE_NUMBER_HERE?text=Hello%20Bravion%20Printers!%20I%27d%20like%20to%20inquire%20about%20your%20services."
+    <a href="https://wa.me/254726612470?text=Hello%20Bravion%20Printers!%20I%27d%20like%20to%20inquire%20about%20your%20services."
        target="_blank"
        rel="noopener"
        class="whatsapp-float"
@@ -60,6 +60,18 @@ import { Component } from '@angular/core';
       0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
       70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
       100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+    @media (max-width: 768px) {
+      .whatsapp-float {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: 48px;
+        height: 48px;
+      }
+      .whatsapp-float svg {
+        width: 24px;
+        height: 24px;
+      }
     }
   `]
 })

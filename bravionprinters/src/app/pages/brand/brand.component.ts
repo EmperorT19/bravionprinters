@@ -102,7 +102,7 @@ interface SubService {
             </div>
 
             <!-- Text Content -->
-            <div class="p-8 md:p-10">
+            <div class="p-6 md:p-10">
               <h2 class="text-2xl md:text-3xl font-heading font-extrabold text-white mb-4 leading-tight">
                 {{ activeService.title }}
               </h2>

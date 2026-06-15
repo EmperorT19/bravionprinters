@@ -11,7 +11,7 @@ import { RouterModule } from '@angular/router';
       <div class="nav-inner">
         <!-- Logo -->
         <a routerLink="/" class="nav-logo">
-          <img src="bravion_logo.png" alt="Bravion Printers Ltd" class="logo-img" />
+          <img src="bravion_logo.jpg" alt="Bravion Printers Ltd" class="logo-img" />
         </a>
 
         <!-- Desktop Nav -->
@@ -87,9 +87,10 @@ import { RouterModule } from '@angular/router';
     }
     .nav-logo { display: flex; align-items: center; text-decoration: none; }
     .logo-img {
-      height: 40px;
+      height: 52px;
       width: auto;
       object-fit: contain;
+      mix-blend-mode: screen;
     }
     .nav-links {
       display: flex;
@@ -192,14 +193,16 @@ import { RouterModule } from '@angular/router';
       display: none;
       flex-direction: column;
       background: #0a0a0a;
-      padding: 1rem 2rem 2rem;
-      border-top: 1px solid rgba(255,255,255,0.05);
+      padding: 0 2rem;
+      border-top: 0px solid rgba(255,255,255,0.05);
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.4s ease, padding 0.4s ease;
+      transition: max-height 0.4s ease, padding 0.4s ease, border-width 0.4s ease;
     }
     .mobile-menu-open {
       max-height: 600px;
+      padding: 1rem 2rem 2rem;
+      border-top-width: 1px;
       overflow-y: auto;
     }
     .mobile-menu a {
@@ -235,6 +238,14 @@ import { RouterModule } from '@angular/router';
       .nav-links, .nav-cta { display: none; }
       .mobile-toggle { display: flex; }
       .mobile-menu { display: flex; }
+    }
+    @media (max-width: 768px) {
+      .nav-inner {
+        padding: 0 1.25rem;
+      }
+      .logo-img {
+        height: 42px;
+      }
     }
   `]
 })

@@ -1,7 +1,7 @@
 import { Component, signal, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { AboutComponent } from '../about/about.component';
+import { AboutComponent } from '../../pages/about/about.component';
 import { ServicesComponent } from '../services/services.component';
 import { ClientsComponent } from '../clients/clients.component';
 

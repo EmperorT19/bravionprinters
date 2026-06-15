@@ -122,30 +122,11 @@
   margin: 0.25rem 0 0;
 }
 
-.stripe-line {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scaleY(1);
-  width: 1px;
-  height: 60px;
-  background: rgba(255,255,255,0.25);
-  opacity: 1;
-  visibility: visible;
-  transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
-}
-
-.stripe-hovered .stripe-line {
-  transform: translate(-50%, -50%) scaleY(0);
-  opacity: 0;
-  visibility: hidden;
-}
-
 .stripe-vertical-label {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(-90deg);
+  transform: translate(-50%, -50%);
   font-family: 'Poppins', sans-serif;
   font-size: 0.72rem;
   font-weight: 600;
@@ -162,7 +143,7 @@
 .stripe-hovered .stripe-vertical-label {
   opacity: 0;
   visibility: hidden;
-  transform: translate(-50%, -50%) rotate(-90deg) scale(0.8);
+  transform: translate(-50%, -50%) scale(0.8);
 }
 
 .right-panel {
@@ -514,12 +495,7 @@
   .stripe:hover .stripe-vertical-label {
     opacity: 0 !important;
     visibility: hidden !important;
-    transform: translate(-50%, -50%) rotate(-90deg) scale(0.8) !important;
-  }
-  .stripe:hover .stripe-line {
-    opacity: 0 !important;
-    visibility: hidden !important;
-    transform: translate(-50%, -50%) scaleY(0) !important;
+    transform: translate(-50%, -50%) scale(0.8) !important;
   }
 }
 
@@ -573,13 +549,9 @@
   }
 
   .stripe-vertical-label {
-    transform: translate(-50%, -50%) rotate(0deg); /* Horizontal on mobile */
     font-size: 0.75rem;
     letter-spacing: 0.2em;
     color: rgba(255, 255, 255, 0.7);
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
   }
 
   .stripe-white .stripe-vertical-label {
@@ -590,10 +562,6 @@
     opacity: 0 !important;
     visibility: hidden !important;
     transform: translate(-50%, -50%) scale(0.85) !important;
-  }
-
-  .stripe-line {
-    display: none;
   }
 
   .brand-badge {
@@ -654,3 +622,17 @@
     right: 1.25rem;
   }
 }
+
+@media (max-width: 768px) {
+  .arrow {
+    width: 36px !important;
+    height: 36px !important;
+  }
+  .arrow svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+  .arrow-left { left: 0.75rem !important; }
+  .arrow-right { right: 0.75rem !important; }
+}
+

@@ -13,7 +13,7 @@ import { RouterModule } from '@angular/router';
         <div class="footer-grid">
           <!-- Brand Column -->
           <div class="footer-col brand-col">
-            <img src="/bravion_logo.png" alt="Bravion Printers" class="footer-logo" />
+            <img src="bravion_logo.jpg" alt="Bravion Printers" class="footer-logo" />
             <p class="footer-desc">
               Your trusted one-stop branding and printing company in Kenya.
               We design, we brand, you grow.
@@ -21,7 +21,8 @@ import { RouterModule } from '@angular/router';
             <div class="social-links">
               <a href="https://www.facebook.com/profile.php?id=61590481945221" target="_blank" rel="noopener" aria-label="Facebook"
                 class="w-10 h-10 rounded-full bg-[#f9f9f9] border border-gray-200 flex items-center justify-center text-[#0a0a0a] transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
-                onmouseover="this.style.background='#1877F2'; this.style.borderColor='#1877F2'; this.style.color='white'">
+                onmouseover="this.style.background='#1877F2'; this.style.borderColor='#1877F2'; this.style.color='white'"
+                onmouseout="this.style.background='#f9f9f9'; this.style.borderColor='#e5e7eb'; this.style.color='#0a0a0a'">
                 <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
               </a>
          
@@ -96,7 +97,7 @@ import { RouterModule } from '@angular/router';
 
 <div class="contact-item">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-  <span>Bravion House, Kilimani<br/>Opp. Rose Avenue Center, next to Listers Car wash<br/>Nairobi, Kenya</span>
+  <span>Bravion House, Kindaruma Road,<br/>Opposite Carrefour Supermarket,<br/>Rose Avenue Mall, Next to Listers Car Wash</span>
 
               </div>
             </div>
@@ -128,7 +129,7 @@ import { RouterModule } from '@angular/router';
       gap: 3rem;
     }
     .footer-logo {
-      height: 36px;
+      height: 48px;
       width: auto;
       margin-bottom: 1rem;
       mix-blend-mode: screen;
