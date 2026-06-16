@@ -87,7 +87,7 @@ import { RouterModule } from '@angular/router';
     }
     .nav-logo { display: flex; align-items: center; text-decoration: none; }
     .logo-img {
-      height: 52px;
+      height: 72px;
       width: auto;
       object-fit: contain;
       mix-blend-mode: screen;
@@ -244,7 +244,7 @@ import { RouterModule } from '@angular/router';
         padding: 0 1.25rem;
       }
       .logo-img {
-        height: 42px;
+        height: 58px;
       }
     }
   `]

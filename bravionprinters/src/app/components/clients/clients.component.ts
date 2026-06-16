@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div [ngClass]="isHomeSection ? 'py-16 px-8 bg-[#0a0a0a] border-y border-white/5' : 'pt-24 pb-16 px-8 md:px-16 bg-[#0a0a0a] text-white min-h-screen border-b border-white/5'">
+    <div [ngClass]="isHomeSection ? 'py-16 px-6 md:px-8 bg-[#0a0a0a] border-y border-white/5' : 'pt-28 pb-16 px-6 md:px-16 bg-[#0a0a0a] text-white min-h-screen border-b border-white/5'">
       <div class="max-w-7xl mx-auto">
 
         <!-- Standalone Page Header -->
@@ -17,22 +17,28 @@ import { CommonModule } from '@angular/common';
         </div>
 
         <!-- Home section: condensed "Trusted By" row -->
-        <div *ngIf="isHomeSection" class="flex flex-col md:flex-row items-center gap-12 justify-between">
+        <div *ngIf="isHomeSection" class="flex flex-col lg:flex-row items-center gap-8 justify-between">
           <h3 class="text-xs font-bold tracking-[0.3em] text-gray-500 uppercase shrink-0">Trusted By</h3>
-          <div class="flex-grow flex flex-wrap justify-center md:justify-end gap-6 md:gap-10">
+          <div class="flex-grow flex flex-wrap justify-center lg:justify-end gap-4 md:gap-6">
             @for (client of clients; track client.name) {
-              <div class="px-6 py-4 border border-white/20 rounded-md text-gray-500 font-bold text-sm tracking-widest hover:border-[#e10600] hover:text-white hover:bg-[#e10600]/10 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_6px_20px_rgba(225,6,0,0.2)] cursor-pointer">
-                {{ client.name | uppercase }}
+              <div class="flex flex-col items-center gap-2 p-3 bg-white border border-neutral-200 rounded-lg w-28 md:w-36 hover:border-[#e10600] transition-all duration-300 transform hover:-translate-y-1 cursor-pointer shadow-sm">
+                <div class="h-10 md:h-12 w-full flex items-center justify-center bg-white rounded p-1">
+                  <img [src]="client.image" [alt]="client.name" class="max-h-full max-w-[85%] object-contain" />
+                </div>
+                <span class="bg-white text-[#e10600] font-bold text-[10px] md:text-xs tracking-wider uppercase px-2 py-1 rounded w-full text-center">{{ client.name }}</span>
               </div>
             }
           </div>
         </div>
 
         <!-- Full client grid (standalone page only) -->
-        <div *ngIf="!isHomeSection" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-24">
+        <div *ngIf="!isHomeSection" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-8 mb-24">
           @for (client of clients; track client.name) {
-            <div class="bg-[#111] border border-white/10 p-8 flex items-center justify-center h-32 rounded-lg hover:border-[#e10600]/60 hover:-translate-y-2 hover:shadow-[0_12px_30px_rgba(225,6,0,0.2)] hover:bg-[#1a0a0a] transition-all duration-400 cursor-pointer group">
-              <span class="text-gray-500 font-bold tracking-widest uppercase text-center group-hover:text-white transition-colors duration-300">{{ client.name }}</span>
+            <div class="bg-white border border-neutral-200 p-4 md:p-6 flex flex-col items-center justify-between h-36 md:h-44 rounded-lg hover:border-[#e10600]/60 hover:-translate-y-2 hover:shadow-[0_12px_30px_rgba(225,6,0,0.15)] hover:bg-white transition-all duration-400 cursor-pointer group shadow-sm">
+              <div class="flex-grow flex items-center justify-center w-full min-h-[50px] max-h-[70px] md:max-h-[90px] bg-white rounded p-2">
+                <img [src]="client.image" [alt]="client.name" class="max-h-full max-w-[80%] object-contain" />
+              </div>
+              <span class="bg-white text-[#e10600] font-bold tracking-wider uppercase text-center text-[10px] md:text-xs px-2 md:px-3 py-1.5 rounded w-full block mt-3">{{ client.name }}</span>
             </div>
           }
         </div>
@@ -68,13 +74,13 @@ export class ClientsComponent {
   @Input() isHomeSection: boolean = false;
 
   readonly clients = [
-    { name: 'AAR' },
-    { name: 'AMREF' },
-    { name: 'Coca-Cola' },
-    { name: 'Villages of Africa' },
-    { name: 'Nairobi Water' },
-    { name: 'TechHub' },
-    { name: 'Bloom Events' },
-    { name: 'AutoFleet Kenya' }
+    { name: 'AAR', image: 'client_aar.png' },
+    { name: 'AMREF', image: 'client_amref.png' },
+    { name: 'Coca-Cola', image: 'client_cocacola.png' },
+    { name: 'Villages of Africa', image: 'client_villages.png' },
+    { name: 'Nairobi Water', image: 'client_nairobiwater.png' },
+    { name: 'TechHub', image: 'client_techhub.png' },
+    { name: 'Bloom Events', image: 'client_bloomevents.png' },
+    { name: 'AutoFleet Kenya', image: 'client_autofleet.png' }
   ];
 }

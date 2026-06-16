@@ -129,7 +129,7 @@ import { RouterModule } from '@angular/router';
       gap: 3rem;
     }
     .footer-logo {
-      height: 48px;
+      height: 66px;
       width: auto;
       margin-bottom: 1rem;
       mix-blend-mode: screen;
