@@ -17,7 +17,6 @@
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  mix-blend-mode: difference;
   white-space: nowrap;
 }
 
@@ -28,6 +27,7 @@
   letter-spacing: 0.25em;
   color: #ffffff;
   line-height: 1;
+  mix-blend-mode: difference;
 }
 
 .brand-dot {
@@ -36,6 +36,15 @@
   border-radius: 50%;
   background: #e10600;
   flex-shrink: 0;
+  transition: background 0.3s ease;
+}
+
+.landing-root:has(.stripe-white:hover) .brand-dot,
+.landing-root:has(.stripe-white.stripe-hovered) .brand-dot,
+.landing-root:has(.stripe-red:hover) .brand-dot,
+.landing-root:has(.stripe-red.stripe-hovered) .brand-dot,
+.brand-dot.dot-black {
+  background: #000000;
 }
 
 .brand-tag {
@@ -45,6 +54,7 @@
   color: #ffffff;
   opacity: 0.6;
   text-transform: uppercase;
+  mix-blend-mode: difference;
 }
 
 .left-panel {

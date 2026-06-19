@@ -5,7 +5,7 @@
   ════════════════════════════════════════ -->
   <header class="brand-badge">
     <span class="brand-name">BRAVION</span>
-    <span class="brand-dot"></span>
+    <span class="brand-dot" [class.dot-black]="hoveredStripe() === 1 || hoveredStripe() === 2"></span>
     <span class="brand-tag">DESIGN . PRINT . BRAND . STATIONERY   </span>
   </header>
 
@@ -13,7 +13,7 @@
     <!-- BLACK STRIPE -->
     <div class="stripe stripe-black" [class.stripe-hovered]="hoveredStripe() === 0" [class.stripe-shrunk]="hoveredStripe() !== null && hoveredStripe() !== 0" (mouseenter)="hoveredStripe.set(0)" (mouseleave)="hoveredStripe.set(null)" (click)="hoveredStripe() === 0 ? hoveredStripe.set(null) : hoveredStripe.set(0)">
       <div class="stripe-content">
-        <span class="stripe-label">BOLD STRATEGIES INN</span>
+        <span class="stripe-label">BOLD STRATEGIES</span>
         <span class="stripe-number">INNOVATIVE SOLUTIONS</span>
         <p class="stripe-desc">Empowering brands with tailored design and printing solutions.</p>
       </div>
