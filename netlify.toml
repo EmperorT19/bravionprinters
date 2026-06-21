@@ -1,0 +1,7 @@
+[build]
+  base    = "bravionprinters"
+  command = "npm install && npm run build"
+  publish = "dist/bravionprinters/browser"
+
+[build.environment]
+  NODE_ENV = "development"
