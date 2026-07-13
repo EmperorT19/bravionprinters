@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "sync": "node copy_to_bravions.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

@@ -163,7 +163,7 @@ import { RouterModule } from '@angular/router';
       transform: translateY(-2px);
     }
     .footer-heading {
-      font-family: 'Poppins', sans-serif;
+      font-family: var(--font-heading);
       font-size: 0.7rem;
       font-weight: 700;
       letter-spacing: 0.2em;
@@ -218,7 +218,7 @@ import { RouterModule } from '@angular/router';
       color: rgba(255,255,255,0.3);
       font-weight: 600;
       letter-spacing: 0.1em;
-      font-family: 'Poppins', sans-serif;
+      font-family: var(--font-heading);
     }
     @media (max-width: 768px) {
       .footer-grid {

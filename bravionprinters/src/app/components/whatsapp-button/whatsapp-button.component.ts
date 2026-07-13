@@ -43,7 +43,7 @@ import { Component } from '@angular/core';
       right: 68px;
       background: #111;
       color: #fff;
-      font-family: 'Poppins', sans-serif;
+      font-family: var(--font-heading);
       font-size: 0.72rem;
       font-weight: 500;
       padding: 0.4rem 0.8rem;

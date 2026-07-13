@@ -102,7 +102,7 @@ import { RouterModule } from '@angular/router';
     .nav-links > li > a {
       display: block;
       padding: 0.5rem 1rem;
-      font-family: 'Poppins', sans-serif;
+      font-family: var(--font-heading);
       font-size: 0.8rem;
       font-weight: 500;
       letter-spacing: 0.05em;
@@ -141,7 +141,7 @@ import { RouterModule } from '@angular/router';
     .dropdown li a {
       display: block;
       padding: 0.5rem 1.5rem;
-      font-family: 'Open Sans', sans-serif;
+      font-family: var(--font-sans);
       font-size: 0.78rem;
       color: rgba(255,255,255,0.6);
       text-decoration: none;
@@ -153,7 +153,7 @@ import { RouterModule } from '@angular/router';
       padding-left: 2rem;
     }
     .nav-cta {
-      font-family: 'Poppins', sans-serif;
+      font-family: var(--font-heading);
       font-size: 0.75rem;
       font-weight: 600;
       letter-spacing: 0.1em;
@@ -208,7 +208,7 @@ import { RouterModule } from '@angular/router';
     .mobile-menu a {
       display: block;
       padding: 0.75rem 0;
-      font-family: 'Poppins', sans-serif;
+      font-family: var(--font-heading);
       font-size: 0.85rem;
       font-weight: 500;
       color: rgba(255,255,255,0.7);
