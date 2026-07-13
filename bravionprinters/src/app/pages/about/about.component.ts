@@ -66,16 +66,16 @@ import { COMPANY_INFO } from '../../data/company-info';
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
           <div class="bg-[#e10600] text-white p-10 rounded-xl shadow-lg transform hover:-translate-y-3 hover:shadow-[0_25px_50px_rgba(225,6,0,0.4)] transition-all duration-500 cursor-pointer">
-            <h3 class="text-2xl font-heading font-bold mb-4 group-hover:text-[#e10600] transition-colors duration-300">Our Mission</h3>
-            <p class="text-white-600">{{ companyInfo.mission }}</p>
+            <h3 class="text-2xl font-heading font-bold mb-4">Our Mission</h3>
+            <p class="text-white/95">{{ companyInfo.mission }}</p>
           </div>
           <div class="bg-[#e10600] text-white p-10 rounded-xl shadow-lg transform hover:-translate-y-3 hover:shadow-[0_25px_50px_rgba(225,6,0,0.4)] transition-all duration-500 cursor-pointer">
             <h3 class="text-2xl font-heading font-bold mb-4">Our Vision</h3>
-            <p class="text-white/90">{{ companyInfo.vision }}</p>
+            <p class="text-white/95">{{ companyInfo.vision }}</p>
           </div>
            <div class="bg-[#e10600] text-white p-10 rounded-xl shadow-lg transform hover:-translate-y-3 hover:shadow-[0_25px_50px_rgba(225,6,0,0.4)] transition-all duration-500 cursor-pointer">
             <h3 class="text-2xl font-heading font-bold mb-4">Our Core Values</h3>
-            <ul class="text-white-600 space-y-2 font-medium">
+            <ul class="text-white/95 space-y-2 font-medium">
               @for (value of companyInfo.values; track value) {
                 <li>✓ {{ value }}</li>
               }
