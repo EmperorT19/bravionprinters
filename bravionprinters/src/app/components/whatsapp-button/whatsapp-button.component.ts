@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-whatsapp-button',
   standalone: true,
   template: `
-    <a href="https://wa.me/254726612470?text=Hello%20Bravion%20Printers!%20I%27d%20like%20to%20inquire%20about%20your%20services."
+    <a href="https://wa.me/254725725186?text=Hello%20Bravion%20Printers!%20I%27d%20like%20to%20inquire%20about%20your%20services."
        target="_blank"
        rel="noopener"
        class="whatsapp-float"

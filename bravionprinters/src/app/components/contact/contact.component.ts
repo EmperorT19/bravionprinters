@@ -137,7 +137,7 @@ import { CommonModule } from '@angular/common';
                       </div>
                       <div class="flex flex-col">
                         <label class="text-[10px] font-bold tracking-widest text-gray-500 uppercase mb-2">Phone Number</label>
-                        <input type="tel" name="Phone" required class="bg-[#f9f9f9] border border-gray-200 rounded-lg px-4 py-3 text-[#0a0a0a] focus:outline-none focus:border-[#e10600] focus:ring-1 focus:ring-[#e10600]/20 transition-all shadow-sm" placeholder="0726 612 470">
+                        <input type="tel" name="Phone" required class="bg-[#f9f9f9] border border-gray-200 rounded-lg px-4 py-3 text-[#0a0a0a] focus:outline-none focus:border-[#e10600] focus:ring-1 focus:ring-[#e10600]/20 transition-all shadow-sm" placeholder="0725 725 186">
                       </div>
                     </div>
                     <div class="flex flex-col">

@@ -136,6 +136,19 @@
   margin: 0.25rem auto;
 }
 
+.stripe-black .stripe-label {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.15;
+  text-align: center;
+  max-width: 90%;
+  margin: 0.25rem auto;
+  letter-spacing: normal;
+}
+
+
 .stripe-desc {
   font-size: 0.72rem;
   font-weight: 400;
