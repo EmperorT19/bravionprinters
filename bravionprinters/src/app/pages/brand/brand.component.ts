@@ -205,6 +205,20 @@ export class BrandComponent {
       image: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780565748/pexels-sleeba-thomas-156395977-30283892_uczkbc.jpg'
     },
     {
+  title: 'Retail & POS Branding',
+  desc: 'Shelf talkers, aisle danglers, checkout counter wraps, and branded product display units that drive shopper attention at the point of sale.',
+  detail: 'We design and fabricate in-store branding elements that capture attention where purchase decisions happen — shelf edge strips, hanging danglers, floor stands, gondola end-caps, and till-point counter wraps. Built for retail durability and quick installation across multiple outlet locations.',
+  tags: ['Shelf Talkers', 'Danglers', 'Display Units', 'Checkout Wraps', 'Retail Branding'],
+  image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&auto=format&fit=crop&q=60'
+},
+{
+  title: 'Construction Site & Hoarding Branding',
+  desc: 'Large-scale hoarding wraps, safety barrier branding, and site perimeter signage that turn construction zones into visible brand real estate.',
+  detail: 'Construction hoardings are prime, long-duration ad space. We fabricate weatherproof mesh and PVC wraps for site perimeters, safety barrier decals, and project signage boards that keep your brand visible to passing traffic for the duration of the build.',
+  tags: ['Hoarding Wraps', 'Site Signage', 'Safety Barriers', 'Mesh Branding', 'Construction'],
+  image: 'https://images.unsplash.com/photo-1541976590-713941681591?w=600&auto=format&fit=crop&q=60'
+},
+    {
       title: 'Institutional & Resort Branding',
       desc: 'Tailored branding designs for hotels, lodges, churches, and academic institutions, ensuring robust visibility and alignment.',
       detail: 'We partner with schools, universities, hotels, resorts, and churches to deliver cohesive environmental branding that reflects their values and identity. From entrance signage and room numbering to branded uniforms and promotional materials, we handle it all.',

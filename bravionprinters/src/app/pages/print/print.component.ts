@@ -205,6 +205,20 @@ export class PrintComponent {
       image: 'https://res.cloudinary.com/duwyaucf1/image/upload/v1780652724/geri-sakti-CYrYxz-uvE4-unsplash_ozvtnr.jpg' 
     },
     {
+  title: 'Custom Packaging & Labels',
+  desc: 'Branded packaging boxes, product labels, and sticker sheets built for retail shelf appeal. Durable stock options with precise die-cutting for custom shapes.',
+  detail: 'From food-grade product boxes to pharmaceutical labels and retail sticker sheets, we handle die-cut packaging design, structural prototyping, and full-color printing. Options include kraft board, coated cartonboard, and waterproof label stock for cosmetics and beverages.',
+  tags: ['Packaging Boxes', 'Product Labels', 'Die-Cutting', 'Kraft Board', 'Waterproof Stock'],
+  image: 'https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?w=600&auto=format&fit=crop&q=60'
+},
+{
+  title: 'Corporate Merchandise & Branded Stationery',
+  desc: 'Custom-printed letterheads, envelopes, notepads, and diaries alongside branded merchandise like mugs, pens, and t-shirts for corporate gifting.',
+  detail: 'We produce cohesive stationery suites — letterheads, compliment slips, envelopes, and diaries — matched to your brand guidelines, plus promotional merchandise for staff onboarding, client gifts, and events. Bulk pricing available for corporate orders.',
+  tags: ['Letterheads', 'Branded Merchandise', 'Diaries', 'Corporate Gifting', 'Bulk Orders'],
+  image: 'https://images.unsplash.com/photo-1568205612837-017257d2310a?w=600&auto=format&fit=crop&q=60'
+},
+    {
       title: 'Books & Publication Printing',
       desc: 'Complete printing services for academic books, magazines, manuals, novels, and catalogs. Includes typesetting assistance, softcover/hardcover binding, and laminating.',
       detail: 'Whether you are self-publishing a novel, producing an academic textbook, or creating a corporate training manual, we offer end-to-end print publishing services including typesetting, proofing, full-color printing, and durable binding in softcover or hardcover formats.',
